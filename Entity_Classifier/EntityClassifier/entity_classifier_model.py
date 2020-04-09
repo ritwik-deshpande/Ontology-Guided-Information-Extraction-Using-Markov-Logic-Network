@@ -8,10 +8,13 @@ import matplotlib.pyplot as plt
 class EntityClassifier:
 
 
-	def __init__(self,nwords,nchars,ntags,sentence_length,word_length,embeddings):
-		self.word_length = word_length
-		self.sentence_length = sentence_length
-		self.model = self.getModel(nwords,nchars,ntags,sentence_length,word_length,embeddings)
+	def __init__(self,nwords = None,nchars=None,ntags=None,sentence_length=None,word_length=None,embeddings=None,label=None):
+		if label == 'train':
+			self.word_length = word_length
+			self.sentence_length = sentence_length
+			self.model = self.getModel(nwords,nchars,ntags,sentence_length,word_length,embeddings)
+		else:
+			print('Loading Pre-Trained Model for testing......')
 
 
 	def getModel(self,nwords,nchars,ntags,max_len,max_len_char,embedding_matrix):

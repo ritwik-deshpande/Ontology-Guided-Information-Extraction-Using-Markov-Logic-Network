@@ -43,25 +43,39 @@ if __name__=='__main__':
 	converters = Converters(words,tags)
 
 
-	X_word_tr, X_char_tr, y_tr = converters.reformatDocuments(train_documents,SENTENCE_LENGTH,WORD_LENGTH)
-	X_word_te, X_char_te, y_te = converters.reformatDocuments(test_documents,SENTENCE_LENGTH,WORD_LENGTH)
 
-
-	NUMBER_OF_WORDS = len(converters.getWord2Idx().keys())
-	NUMBER_OF_TAGS = len(converters.getTag2Idx().keys())
-	NUMBER_OF_CHARS = len(converters.getChar2Idx().keys())
-	embedding_matrix = getEmbeddingMatrix(converters.getWord2Idx())
-	
-
-	entity_classifier = EntityClassifier(NUMBER_OF_WORDS,NUMBER_OF_CHARS,NUMBER_OF_TAGS,SENTENCE_LENGTH,WORD_LENGTH,embedding_matrix)
 
 	if sys.argv[1] == 'train':
-		entity_classifier.trainModel(X_word_tr,X_char_tr,y_tr,32,1)
+
+
+		X_word_tr, X_char_tr, y_tr = converters.reformatDocuments(train_documents,SENTENCE_LENGTH,WORD_LENGTH)
+
+
+		NUMBER_OF_WORDS = len(converters.getWord2Idx().keys())
+		NUMBER_OF_TAGS = len(converters.getTag2Idx().keys())
+		NUMBER_OF_CHARS = len(converters.getChar2Idx().keys())
+		embedding_matrix = getEmbeddingMatrix(converters.getWord2Idx())
+		
+
+
+		entity_classifier = EntityClassifier(NUMBER_OF_WORDS,NUMBER_OF_CHARS,NUMBER_OF_TAGS,SENTENCE_LENGTH,WORD_LENGTH,embedding_matrix,label = 'train')
+
+
+
+
+		entity_classifier.trainModel(X_word_tr,X_char_tr,y_tr,batch_size=32,epochs = 1)
 		entity_classifier.save_model('EntityClassifier2.h5')
 	
 
 
 	if sys.argv[1] == 'test':
+
+		X_word_te, X_char_te, y_te = converters.reformatDocuments(test_documents,SENTENCE_LENGTH,WORD_LENGTH)
+
+		entity_classifier = EntityClassifier(label= 'test')
+
+
+
 		entity_classifier.load_model('EntityClassifierModel.h5')
 		y_pred = entity_classifier.predict(X_word_te[:2],X_char_te[:2])
 
