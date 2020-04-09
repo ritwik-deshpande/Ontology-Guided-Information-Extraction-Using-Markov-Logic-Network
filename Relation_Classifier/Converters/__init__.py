@@ -1,1 +1,1 @@
-from .converters import 
+from .converters import getRelations,getGoldTruthTrain,getGoldTruthTest,getIndexes
