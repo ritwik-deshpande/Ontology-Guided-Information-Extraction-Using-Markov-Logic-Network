@@ -65,7 +65,7 @@ def getRelations(documents):
     return document_relations
 
 
-def getGoldTruth(document_relations,documents):
+def getGoldTruthTrain(document_relations,documents):
     
     gold_truths = dict()
     #dictionary of {(0,2,3):"Live_In"} 0 : is the document Number, 2,3 are the tokens in the sentence that are related by this relation which is the value of the dictionary.
