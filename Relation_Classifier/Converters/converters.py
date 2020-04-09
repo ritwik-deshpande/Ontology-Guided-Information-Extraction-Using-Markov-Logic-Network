@@ -155,3 +155,9 @@ def getGoldTruth(document_relations,documents):
     print(input_sentences)
         
     return input_sentences,indexes
+
+def getGoldTruthTest(sentenceID,indexes):
+    
+    if (sentenceID,indexes[0],indexes[1]) not in gold_truths_test:
+        return "None"
+    return gold_truths_test[(sentenceID,indexes[0],indexes[1])]
