@@ -60,11 +60,11 @@ def getRelations(documents):
                                     document_relations[j] = [(relations, index_of_sentence)]
                                 else:
                                     document_relations[j].append((relations, index_of_sentence))
-    #print(document_relations)
-                            
+    
+    #print(document_relations)                         
     return document_relations
 
-# print(document_relations)
+
 def getGoldTruth(document_relations,documents):
     
     gold_truths = dict()
