@@ -99,3 +99,59 @@ def getGoldTruth(document_relations,documents):
     #print(total_sentences)
     n_relations = len(set(total_relations))
     return (gold_truths,total_relations,total_sentences)
+
+
+ def getIndexes(data,column,pointer):
+    indexes = []
+    input_words = []
+    input_tags_all = []
+    input_sentences = []
+    input_tags_not_other =[]
+    j=0;
+    for i in range(pointer,pointer+len(data['Word'])):
+        input_words.append(data['Word'][i])
+        input_tags_all.append(data[column][i])
+        if data[column][i] != 'O':
+            input_tags_not_other.append((j,data[column][i]))
+        j = j + 1
+
+    flag = 0
+    for i in range(0,len(input_tags_not_other)):
+        for j in range(i+1,len(input_tags_not_other)):
+            if input_tags_not_other[i][1][0] == 'B' and input_tags_not_other[j][1][0] == 'B':
+                flag = 0
+                
+                start1 = i + 1 
+                while start1< len(input_tags_not_other) and input_tags_not_other[start1][1][0] == 'I':
+                    start1 = start1 + 1 
+                    flag = 1
+                
+                start1 = start1 - 1
+                start2 = j + 1
+                while start2 < len(input_tags_not_other) and input_tags_not_other[start2][1][0] == 'I':
+                    start2 = start2 + 1 
+                    flag = 1
+                
+                start2 = start2 - 1 
+                print(input_tags_not_other[start1][0],input_tags_not_other[start2][0])
+                if  start1 != start2:
+                    indexes.append((input_tags_not_other[start1][0],input_tags_not_other[start2][0]))
+                    
+                    
+                    
+    for index in indexes:
+        start = index[0]
+        end = index[1]
+        input_sentence = ''
+        for j,word in enumerate(input_words):
+            if j  == start or j  == end:
+                start_tag = '<'+ input_tags_all[j]+'>'
+                end_tag = '</'+ input_tags_all[j]+'> '
+                input_sentence = input_sentence + start_tag + word + end_tag
+            else:
+                input_sentence = input_sentence + word + ' '
+        input_sentences.append(input_sentence)   
+
+    print(input_sentences)
+        
+    return input_sentences,indexes
