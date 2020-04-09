@@ -1,1 +1,1 @@
-from .parsers import parseDocuments
+from .parsers import getDocuments
