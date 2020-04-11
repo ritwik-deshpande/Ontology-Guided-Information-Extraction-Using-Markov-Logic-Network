@@ -1,4 +1,4 @@
-Use Linux (Ubuntu ) as your OS for the Alchemy setup.
+Use Linux (Ubuntu 16.04) as your OS for the Alchemy setup.
 
 Download Alchemy2 (alchemy-2.tar.gz) from https://code.google.com/archive/p/alchemy-2/ . Extract the files.
 
