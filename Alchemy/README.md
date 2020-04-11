@@ -17,7 +17,9 @@ Open a terminal and navigate to alchemy-2/bin directory. Execute the following c
 Open the output.mln file generated. Add the following hard constraints to the weighted rules :
 
 RFtype(s, t1, t2, OrgBased_In) ^ RFtype(s, t2, t3, Located_In) => RFtype(s, t1, t3, OrgBased_In).
+
 RFtype(s, t1, t2, Located_In) ^ RFtype(s, t2, t3, Located_In) => RFtype(s, t1, t3, Located_In).
+
 EFtype(s, t1, Org) ^ EFtype(s, t2, Org) => RFtype(s, t1, t2, None).
 
 The period at the end indicates that it is a hard constraint.
