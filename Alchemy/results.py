@@ -89,8 +89,8 @@ if __name__=='__main__':
 
     entities = ['Peop','Org','O','Loc']
     relations = ['Work_For','Live_In','Kill','Located_In','None','OrgBased_In']
-    getClassifierReport("relation_classifier.csv",'Relation Classifier',relations)
-    getAlchemyReport('relation_classifier_10.csv','Relation Classifier',mln_results,relations)
+    getClassifierReport("../Data/relation_classifier.csv",'Relation Classifier',relations)
+    getAlchemyReport('../Data/relation_classifier.csv','Relation Classifier',mln_results,relations)
     
-    getClassifierReport("base_classifier_10.csv",'Base Classifier',entities)
-    getAlchemyReport('base_classifier_10.csv','Base Classifier',mln_results,entities)
+    getClassifierReport("../Data/base_classifier.csv",'Base Classifier',entities)
+    getAlchemyReport('../Data/base_classifier.csv','Base Classifier',mln_results,entities)

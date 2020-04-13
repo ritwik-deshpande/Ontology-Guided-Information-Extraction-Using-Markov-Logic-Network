@@ -11,10 +11,10 @@ import sys
 
 if __name__ == '__main__':
          
-    documents_train = getDocuments('train.txt')
+    documents_train = getDocuments('../Data/train.txt')
     relations_train = getRelations(documents_train)
     gold_truths_train,tr_tr,ts_tr = getGoldTruth(relations_train,documents_train)
-    documents_test = getDocuments('test.txt')
+    documents_test = getDocuments('../Data/test.txt')
     relations_test = getRelations(documents_test)
     gold_truths_test,tr_te,ts_te = getGoldTruth(relations_test,documents_test)
     n_relations = len(set(tr_tr))
@@ -37,7 +37,7 @@ if __name__ == '__main__':
         actual_tags=[]
         predicted_tags=[]
 
-        with open('relation_classifier_test.csv', 'w', newline='') as file:
+        with open('../Data/relation_classifier_test.csv', 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(["SentenceID","token1","token2","Sentence","Predicted","Gold Truth"])
             for sentenceID in range(0,288):
