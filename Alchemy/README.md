@@ -34,8 +34,9 @@ Check the inference_results.results file for the final probabilities of classifi
 To compare the final results with Base Classifier and Entity Classifier run the results.py file present in this Folder.
 
 </br>
-</br>
       python results.py
+
+</br>
 
 For reference :
 
