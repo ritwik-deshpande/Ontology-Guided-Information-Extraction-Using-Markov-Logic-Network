@@ -24,7 +24,6 @@ if __name__ == '__main__':
         kclf = KerasTextClassifier(input_length=50, n_classes=n_relations, max_words=15000)
         tr_sent, te_sent, tr_rel, te_rel = train_test_split(ts_tr, tr_tr, test_size=0.1)
         kclf.fit(X=tr_sent, y=tr_rel, X_val=te_sent, y_val=te_rel,batch_size=64, lr=0.001, epochs=50)
-        kclf.save_model() 
         kclf.save()
 
     if sys.argv[1] == 'test':

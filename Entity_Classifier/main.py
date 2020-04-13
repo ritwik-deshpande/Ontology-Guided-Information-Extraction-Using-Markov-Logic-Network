@@ -37,8 +37,8 @@ if __name__=='__main__':
 	test_documents,test_words ,test_tags = parseDocuments("test.txt")
 	
 
-	words = list(set(train_words+test_words))
-	tags = list(set(train_tags+test_tags))
+	words = sorted(list(set(train_words+test_words)))
+	tags = sorted(list(set(train_tags+test_tags)))
         
 	converters = Converters(words,tags)
 
@@ -63,8 +63,8 @@ if __name__=='__main__':
 
 
 
-		entity_classifier.trainModel(X_word_tr,X_char_tr,y_tr,batch_size=32,epochs = 1)
-		entity_classifier.save_model('EntityClassifier2.h5')
+		entity_classifier.trainModel(X_word_tr,X_char_tr,y_tr,batch_size=32,epochs = 20)
+		entity_classifier.save()
 	
 
 
@@ -76,8 +76,8 @@ if __name__=='__main__':
 
 
 
-		entity_classifier.load_model('EntityClassifierModel.h5')
-		y_pred = entity_classifier.predict(X_word_te[:2],X_char_te[:2])
+		entity_classifier.load()
+		y_pred = entity_classifier.predict(X_word_te,X_char_te)
 
 		total_results = len(y_pred)
 	

@@ -94,14 +94,6 @@ class KerasTextClassifier(BaseEstimator, TransformerMixin):
             self.model.fit(seqs, categorical_y, batch_size=batch_size,
                            epochs=epochs, validation_split=0.1)
            
-       
-    def save_model(self):
-        print("Saving the Model...")
-        self.model.save("RelationClassifierModel.h5")
-        
-    def load_SavedModel(self):
-        print("Loading the Model...")
-        self.model = tf.keras.models.load_model('RelationClassifierModel.h5')
     
     def predict_proba(self, X, y=None):
         return self.model.predict(self._get_sequences(X))
