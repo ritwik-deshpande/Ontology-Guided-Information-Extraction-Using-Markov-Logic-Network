@@ -87,6 +87,7 @@ if __name__=='__main__':
 						token_count = token_count + 1
 
 
+		print("base_classifier_test.csv has been created")
 		print('classification_report: \n',classification_report(actual_tags,predicted_tags,digits=3))
 		print('confusion_matrix :\n',confusion_matrix(actual_tags,predicted_tags))
 						
