@@ -10,7 +10,7 @@ def getEmbeddingMatrix(word2idx):
 	EMBEDDING_DIM = 50
 	embedding_matrix = np.zeros((len(word2idx.keys()) +1, EMBEDDING_DIM))
 
-	f = open('vecs.lc.over100freq.txt',encoding='utf8',errors='ignore')
+	f = open('../Data/vecs.lc.over100freq.txt',encoding='utf8',errors='ignore')
 	for line in f:
 	    values = line.split(' ')
 	    word = values[0]
@@ -32,9 +32,9 @@ if __name__=='__main__':
 
 
 
-	train_documents,train_words,train_tags = parseDocuments("train.txt")
+	train_documents,train_words,train_tags = parseDocuments("../Data/train.txt")
 	
-	test_documents,test_words ,test_tags = parseDocuments("test.txt")
+	test_documents,test_words ,test_tags = parseDocuments("../Data/test.txt")
 	
 
 	words = list(set(train_words+test_words))
@@ -71,7 +71,7 @@ if __name__=='__main__':
 		actual_tags = []
 
 
-		with open('base_classifier_test.csv', 'w', newline='') as file:
+		with open('../Data/base_classifier_test.csv', 'w', newline='') as file:
 			writer = csv.writer(file)
 			writer.writerow(["SentenceID","tokenID","Word", "Predicted","Gold Truth"])
 			for i in range(0,total_results):
