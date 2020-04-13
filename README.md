@@ -1,14 +1,14 @@
 **Prerequisites before running**
 <br/>
+This Files are Tested for following versions:
 
-
-Install Python version :3.X
+Python version :3.X
  <br/>
 
-Install Keras version : 2.1
+Install Keras version : 2.3.1
 <br/>
 
-Install Tensorflow version : 2.3
+Install Tensorflow version : 2.1.0
 <br/>
 
 
