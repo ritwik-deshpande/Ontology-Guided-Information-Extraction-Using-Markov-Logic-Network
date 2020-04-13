@@ -1,17 +1,25 @@
-from tensorflow.python.keras.models import Model, Input
-from tensorflow.python.keras.layers import LSTM, Embedding, Dense, TimeDistributed,concatenate,SpatialDropout1D,Bidirectional
+from keras.models import Model, Input
+from keras.layers import LSTM, Embedding, Dense, TimeDistributed,concatenate,SpatialDropout1D,Bidirectional
 import numpy as np
 import pandas as pd
 import tensorflow as tf
 import matplotlib.pyplot as plt
+import pickle
 
 class EntityClassifier:
 
 
-	def __init__(self,nwords,nchars,ntags,sentence_length,word_length,embeddings):
-		self.word_length = word_length
-		self.sentence_length = sentence_length
-		self.model = self.getModel(nwords,nchars,ntags,sentence_length,word_length,embeddings)
+	def __init__(self,nwords = None,nchars=None,ntags=None,sentence_length=None,word_length=None,embeddings=None,label=None):
+		if label == 'train':
+			self.word_length = word_length
+			self.sentence_length = sentence_length
+			self.nwords =nwords
+			self.ntags = ntags
+			self.nchars = nchars
+			self.embeddings = embeddings
+			self.model = self.getModel(self.nwords,self.nchars,self.ntags,self.sentence_length,self.word_length,self.embeddings)
+		else:
+			print('Loading Pre-Trained Model for testing......')
 
 
 	def getModel(self,nwords,nchars,ntags,max_len,max_len_char,embedding_matrix):
@@ -46,13 +54,26 @@ class EntityClassifier:
 
 		return model
 
-	def save_model(self,model_file):
-		self.model.save(model_file)
+	# def save_model(self,model_file):
+	# 	self.model.reset_metrics()
+	# 	self.model.save(model_file)
 
-	def load_model(self,model_file):
-		self.model = tf.keras.models.load_model(model_file)
+	# def load_model(self,model_file):
+	# 	self.model = tf.keras.models.load_model(model_file)
 
-	
+
+	def save(self, path="model"):                               
+		self.model.save_weights('{}_weights.h5'.format(path))          
+		with open("{}_index.pkl".format(path), "wb") as f:                   
+			pickle.dump([self.nwords,self.nchars, self.ntags, self.sentence_length, self.word_length, self.embeddings], f)         
+	        
+	def load(self, path="model"):                                                              
+		with open("{}_index.pkl".format(path), "rb") as f:
+			self.nwords,self.nchars, self.ntags, self.sentence_length, self.word_length, self.embeddings = pickle.load(f)                                                                     
+		self.model = self.getModel(self.nwords,self.nchars, self.ntags, self.sentence_length, self.word_length, self.embeddings)                                           
+		self.model.load_weights('{}_weights.h5'.format(path))
+		
+
 
 	def trainModel(self,train_words,train_chars,y_labels,batch_size,epochs):
 		history = self.model.fit([train_words,
