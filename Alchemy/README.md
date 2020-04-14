@@ -8,6 +8,13 @@ If make command gives an error it is probably due to the bison version ,check yo
 
 To downgrade bison follow the link https://askubuntu.com/questions/444982/install-bison-2-7-in-ubuntu-14-04 .
 
+
+We have already provided a train.db and test.db file from our previous results of entity and relation classfiers.
+If you want to generate a custom train.db and test.db files using the new results that are generated from the classifers(base_classifier_test.csv and relation_classifier_test.csv) run the init.py file in the folder.
+
+      python init.py
+
+
 Copy the train.db, univRules.mln, test.db and queries.txt files from Project/Alchemy directory and place them inside alchemy-2/bin.
 
 Open a terminal and navigate to alchemy-2/bin directory. Execute the following command for training :
