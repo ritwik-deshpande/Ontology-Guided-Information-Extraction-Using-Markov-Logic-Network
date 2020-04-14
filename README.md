@@ -1,6 +1,8 @@
 **Prerequisites before running**
 <br/>
-This Files are Tested for following versions:
+
+Linux (Ubuntu 16.04) as your Operating System:
+<br/>
 
 Python version :3.X
  <br/>
@@ -13,7 +15,7 @@ Install Tensorflow version : 2.1.0
 
 
 **Dataset**
-Files for training and testing would be same for both Entity and Relation Classifier, should be present inside the data Folder.
+Files for training and testing would be same for both Entity and Relation Classifier, should be present inside the Data Folder.
 Make the changes inside main.py(for training parameters) during training. Currently train.txt and test.txt are being used.
 
 ***Note: Both the train and test data should strictly follow the format of CoNLL04 Dataset***

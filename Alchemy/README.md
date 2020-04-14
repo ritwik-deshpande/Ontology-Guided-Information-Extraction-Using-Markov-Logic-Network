@@ -8,13 +8,13 @@ If make command gives an error it is probably due to the bison version ,check yo
 
 To downgrade bison follow the link https://askubuntu.com/questions/444982/install-bison-2-7-in-ubuntu-14-04 .
 
-Store the files train.db, univRules.mln, test.db and queries.txt in alchemy-2/bin.
+Copy the train.db, univRules.mln, test.db and queries.txt files from Project/Alchemy directory and place them inside alchemy-2/bin.
 
 Open a terminal and navigate to alchemy-2/bin directory. Execute the following command for training :
   
       ./learnwts -g -i univRules.mln -o output.mln -t train.db
 
-Open the output.mln file generated. Add the following hard constraints to the weighted rules :
+Open the output.mln file generated. Add the following rules as hard constraints(INF wieght) at the end of the file  :
 
 RFtype(s, t1, t2, OrgBased_In) ^ RFtype(s, t2, t3, Located_In) => RFtype(s, t1, t3, OrgBased_In).
 
@@ -29,7 +29,7 @@ Open the terminal again. Execute the following command for testing :
       ./infer -i output.mln -e test.db -r inference_results.results -f queries
 
 Check the inference_results.results file for the final probabilities of classification.
-
+Copy the inference_results.results file and place it inside Project/Alchemy folder
 
 To compare the final results with Base Classifier and Relation Classifier, run the results.py file present in this folder.
 

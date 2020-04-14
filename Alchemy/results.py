@@ -83,14 +83,14 @@ def getAlchemyReport(file,label,mln_results,labels):
     print(confusion_matrix(actual_tags,predicted_tags,labels=labels))
     
 if __name__=='__main__':
-    mln_results = getInferenceResults('inference_results_10.results')
+    mln_results = getInferenceResults('inference_results.results')
     
 
 
     entities = ['Peop','Org','O','Loc']
     relations = ['Work_For','Live_In','Kill','Located_In','None','OrgBased_In']
-    getClassifierReport("../Data/relation_classifier.csv",'Relation Classifier',relations)
-    getAlchemyReport('../Data/relation_classifier.csv','Relation Classifier',mln_results,relations)
+    getClassifierReport("../Data/relation_classifier_test.csv",'Relation Classifier',relations)
+    getAlchemyReport('../Data/relation_classifier_test.csv','Relation Classifier',mln_results,relations)
     
-    getClassifierReport("../Data/base_classifier.csv",'Base Classifier',entities)
-    getAlchemyReport('../Data/base_classifier.csv','Base Classifier',mln_results,entities)
+    getClassifierReport("../Data/base_classifier_test.csv",'Base Classifier',entities)
+    getAlchemyReport('../Data/base_classifier_test.csv','Base Classifier',mln_results,entities)
