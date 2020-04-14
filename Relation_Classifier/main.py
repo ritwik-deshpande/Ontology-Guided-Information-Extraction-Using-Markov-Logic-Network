@@ -32,7 +32,7 @@ if __name__ == '__main__':
         kclf.load()
         label_to_use = list(kclf.encoder.classes_)
         pointer = 0;
-        data = pd.read_csv('base_classifier_test.csv')
+        data = pd.read_csv('../Data/base_classifier_test.csv')
         
         actual_tags=[]
         predicted_tags=[]
