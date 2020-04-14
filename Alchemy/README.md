@@ -31,12 +31,9 @@ Open the terminal again. Execute the following command for testing :
 Check the inference_results.results file for the final probabilities of classification.
 
 
-To compare the final results with Base Classifier and Entity Classifier run the results.py file present in this Folder.
+To compare the final results with Base Classifier and Relation Classifier, run the results.py file present in this folder.
 
-</br>
       python results.py
-
-</br>
 
 For reference :
 
