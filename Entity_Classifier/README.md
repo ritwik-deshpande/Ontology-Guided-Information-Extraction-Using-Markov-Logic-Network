@@ -24,4 +24,4 @@ python main.py train
 For Testing run the command:<br/>
 python main.py test
 <br/>
-Results of the Entity Classifier is stored in the enitity_classifier.csv file inside the EntityClassifer directory
+Results of the Entity Classifier is stored in the base_classifier_test.csv file inside the Data directory
