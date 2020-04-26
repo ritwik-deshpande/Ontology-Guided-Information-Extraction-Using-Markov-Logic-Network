@@ -40,7 +40,7 @@ Copy the inference_results.results file and place it inside Project/Alchemy fold
 
 To compare the final results with Base Classifier and Relation Classifier, run the results.py file present in this folder.
 
-      python results.py
+      python results.py inference_results.results base_classifier_test.csv relation_classifier_test.csv
 
 For reference :
 

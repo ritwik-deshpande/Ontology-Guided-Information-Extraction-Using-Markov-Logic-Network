@@ -1,6 +1,8 @@
 
 from sklearn.metrics import confusion_matrix, classification_report
 import pandas as pd
+import sys
+
 
 def getInferenceResults(filename):
     with open (filename, 'r') as f:
@@ -18,7 +20,7 @@ def getInferenceResults(filename):
                 end = end + 1
 
             content = line[start:end].split(',')
-#             print(content,probability)
+            # print(content,probability)
             if line[0] == 'E':
                 if content[0]+'-'+content[1] in results_dict and results_dict[content[0]+'-'+content[1]][1] < probability:
                     results_dict[content[0]+'-'+content[1]] = (content[2], probability)
@@ -30,7 +32,7 @@ def getInferenceResults(filename):
                     results_dict[content[0]+'-'+content[1]+'-'+content[2]] = (content[3],probability)
                 elif content[0]+'-'+content[1]+'-'+content[2] not in results_dict:
                     results_dict[content[0]+'-'+content[1]+'-'+content[2]] = (content[3],probability)
-#         print(results_dict)
+        # print(results_dict)
         return results_dict
 
 def getClassifierReport(file,label,labels):
@@ -38,8 +40,17 @@ def getClassifierReport(file,label,labels):
 
     predicted_tags = data['Predicted']
     gold_truths = data['Gold Truth']
+
+    wo_none_predicted_tags = []
+    wo_none_gold_truths = []
+
+    for p_tag,g_tag in zip(predicted_tags,gold_truths):
+        if g_tag != 'None' and g_tag !='O':
+            wo_none_predicted_tags.append(p_tag)
+            wo_none_gold_truths.append(g_tag)
+
     print('The Classification Report of ',label)
-    print(classification_report(predicted_tags,gold_truths))
+    print(classification_report(wo_none_gold_truths,wo_none_predicted_tags))
 
 def getAlchemyReport(file,label,mln_results,labels):
     THRESHOLD = 0.1
@@ -52,12 +63,13 @@ def getAlchemyReport(file,label,mln_results,labels):
         THRESHOLD = 0.1
         for sentenceID,tokenID, gold_truth in zip(data['SentenceID'],data['tokenID'],data['Gold Truth']):
             key = str(sentenceID) + '-'+str(tokenID)
-            if 'Other' not in gold_truth:
+            if gold_truth !='O' and 'Other' not in gold_truth:
                 if len(gold_truth) > 2:
                     actual_tags.append(gold_truth[2:])
                 else:
                     actual_tags.append(gold_truth)
-                if key in mln_results.keys() and mln_results[key][1] > THRESHOLD:
+                
+                if key in mln_results.keys():
                     predicted_tags.append(mln_results[key][0])
                 else:
                     predicted_tags.append('O')
@@ -68,29 +80,31 @@ def getAlchemyReport(file,label,mln_results,labels):
         for sentenceID,token1,token2,gold_truth in zip(data['SentenceID'],data['token1'],data['token2'],data['Gold Truth']):
             key = str(sentenceID) + '-'+str(token1)+'-'+str(token2)
             
-#             if gold_truth != 'None':
-            actual_tags.append(gold_truth)
-            if key in mln_results.keys() and mln_results[key][1] > THRESHOLD:
-                predicted_tags.append(mln_results[key][0])
-            else:
+            if gold_truth != 'None':
+                actual_tags.append(gold_truth)
+                if key in mln_results.keys() :
+                    predicted_tags.append(mln_results[key][0])
+                else:
                     predicted_tags.append('None')
         
 
     
+    # print(actual_tags)
+    # print(predicted_tags)
 
-    print(classification_report(predicted_tags,actual_tags))
+    print(classification_report(actual_tags,predicted_tags))
     print(labels)
     print(confusion_matrix(actual_tags,predicted_tags,labels=labels))
     
 if __name__=='__main__':
-    mln_results = getInferenceResults('inference_results.results')
+    mln_results = getInferenceResults(sys.argv[1])
     
 
 
     entities = ['Peop','Org','O','Loc']
     relations = ['Work_For','Live_In','Kill','Located_In','None','OrgBased_In']
-    getClassifierReport("../Data/relation_classifier_test.csv",'Relation Classifier',relations)
-    getAlchemyReport('../Data/relation_classifier_test.csv','Relation Classifier',mln_results,relations)
+    getClassifierReport("../Data/"+sys.argv[3],'Relation Classifier',relations)
+    getAlchemyReport('../Data/'+sys.argv[3],'Relation Classifier',mln_results,relations)
     
-    getClassifierReport("../Data/base_classifier_test.csv",'Base Classifier',entities)
-    getAlchemyReport('../Data/base_classifier_test.csv','Base Classifier',mln_results,entities)
+    getClassifierReport("../Data/"+sys.argv[2],'Base Classifier',entities)
+    getAlchemyReport('../Data/'+sys.argv[2],'Base Classifier',mln_results,entities)
