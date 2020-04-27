@@ -36,21 +36,30 @@ def getInferenceResults(filename):
         return results_dict
 
 def getClassifierReport(file,label,labels):
-    data = pd.read_csv(file) 
+	data = pd.read_csv(file) 
 
-    predicted_tags = data['Predicted']
-    gold_truths = data['Gold Truth']
+	predicted_tags = data['Predicted']
+	gold_truths = data['Gold Truth']
 
-    wo_none_predicted_tags = []
-    wo_none_gold_truths = []
+	wo_none_predicted_tags = []
+	wo_none_gold_truths = []
+	if label == 'Base Classifier':
+		for p_tag,g_tag in zip(predicted_tags,gold_truths):
+			if g_tag !='O' and  g_tag[2:] != 'Other':
+				if len(p_tag) > 2:
+					wo_none_predicted_tags.append(p_tag[2:])
+				else:
+					wo_none_predicted_tags.append(p_tag)
+				wo_none_gold_truths.append(g_tag[2:])
+	else:
+		for p_tag,g_tag in zip(predicted_tags,gold_truths):
+			if g_tag != 'None':
+				wo_none_gold_truths.append(g_tag)
+				wo_none_predicted_tags.append(p_tag)
 
-    for p_tag,g_tag in zip(predicted_tags,gold_truths):
-        if g_tag != 'None' and g_tag !='O':
-            wo_none_predicted_tags.append(p_tag)
-            wo_none_gold_truths.append(g_tag)
 
-    print('The Classification Report of ',label)
-    print(classification_report(wo_none_gold_truths,wo_none_predicted_tags))
+	print('The Classification Report of ',label)
+	print(classification_report(wo_none_gold_truths,wo_none_predicted_tags))
 
 def getAlchemyReport(file,label,mln_results,labels):
     THRESHOLD = 0.1
@@ -58,7 +67,7 @@ def getAlchemyReport(file,label,mln_results,labels):
     actual_tags = []
     predicted_tags = []
     
-#     print(mln_results)
+   
     if label == 'Base Classifier':
         THRESHOLD = 0.1
         for sentenceID,tokenID, gold_truth in zip(data['SentenceID'],data['tokenID'],data['Gold Truth']):
@@ -91,7 +100,7 @@ def getAlchemyReport(file,label,mln_results,labels):
     
     # print(actual_tags)
     # print(predicted_tags)
-
+    print('The Classification Report Alchemy trained '+label)
     print(classification_report(actual_tags,predicted_tags))
     print(labels)
     print(confusion_matrix(actual_tags,predicted_tags,labels=labels))

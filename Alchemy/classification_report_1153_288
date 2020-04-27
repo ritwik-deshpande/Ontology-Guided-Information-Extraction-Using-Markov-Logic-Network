@@ -1,0 +1,66 @@
+The Classification Report of  Relation Classifier
+              precision    recall  f1-score   support
+
+        Kill       1.00      0.92      0.96        37
+     Live_In       1.00      0.75      0.86        84
+  Located_In       0.90      0.84      0.87        82
+        None       0.00      0.00      0.00         0
+ OrgBased_In       0.99      0.76      0.86        94
+    Work_For       1.00      0.86      0.93        66
+
+    accuracy                           0.81       363
+   macro avg       0.81      0.69      0.74       363
+weighted avg       0.97      0.81      0.88       363
+
+The Classification Report Alchemy trained Relation Classifier
+              precision    recall  f1-score   support
+
+        Kill       0.62      0.65      0.63        37
+     Live_In       0.70      0.51      0.59        84
+  Located_In       0.75      0.61      0.67        82
+        None       0.00      0.00      0.00         0
+ OrgBased_In       0.75      0.48      0.58        94
+    Work_For       0.67      0.64      0.65        66
+
+    accuracy                           0.56       363
+   macro avg       0.58      0.48      0.52       363
+weighted avg       0.71      0.56      0.62       363
+
+['Work_For', 'Live_In', 'Kill', 'Located_In', 'None', 'OrgBased_In']
+[[42  1  1  1 18  3]
+ [11 43  4  3 20  3]
+ [ 3  1 24  0  7  2]
+ [ 4  4  3 50 14  7]
+ [ 0  0  0  0  0  0]
+ [ 3 12  7 13 14 45]]
+The Classification Report of  Base Classifier
+              precision    recall  f1-score   support
+
+         Loc       0.91      0.69      0.78       654
+           O       0.00      0.00      0.00         0
+         Org       0.74      0.74      0.74       425
+       Other       0.00      0.00      0.00         0
+        Peop       0.87      0.89      0.88       679
+
+    accuracy                           0.78      1758
+   macro avg       0.51      0.46      0.48      1758
+weighted avg       0.86      0.78      0.81      1758
+
+The Classification Report Alchemy trained Base Classifier
+              precision    recall  f1-score   support
+
+         Loc       0.91      0.64      0.75       654
+           O       0.00      0.00      0.00         0
+         Org       0.73      0.75      0.74       425
+        Peop       0.83      0.90      0.87       679
+
+    accuracy                           0.77      1758
+   macro avg       0.62      0.57      0.59      1758
+weighted avg       0.84      0.77      0.79      1758
+
+['Peop', 'Org', 'O', 'Loc']
+[[614  34  14  17]
+ [ 45 317  36  27]
+ [  0   0   0   0]
+ [ 77  82  74 421]]
+
