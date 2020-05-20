@@ -17,7 +17,7 @@ if __name__=='__main__':
 	train_documents = []
 	test_documents = []
 
-	SENTENCE_LENGTH = 50
+	SENTENCE_LENGTH = 100
 	WORD_LENGTH =10
 
 
@@ -36,7 +36,7 @@ if __name__=='__main__':
 
 		entity_classifier = EntityClassifier(SENTENCE_LENGTH,WORD_LENGTH,words,tags,label = 'train')
 
-		entity_classifier.trainModel(train_documents,batch_size=32,epochs = 20)
+		entity_classifier.trainModel(train_documents,batch_size=32,epochs = 43)
 		entity_classifier.save()
 	
 

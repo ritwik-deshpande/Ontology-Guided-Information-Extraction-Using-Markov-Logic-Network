@@ -1,0 +1,283 @@
+The Classification Report of  Relation Classifier
+              precision    recall  f1-score   support
+
+        Kill       0.38      0.74      0.51        47
+     Live_In       0.48      0.49      0.48       100
+  Located_In       0.39      0.77      0.51        94
+        None       0.83      0.65      0.73       704
+ OrgBased_In       0.62      0.68      0.65       105
+    Work_For       0.46      0.49      0.47        76
+
+    accuracy                           0.64      1126
+   macro avg       0.53      0.63      0.56      1126
+weighted avg       0.70      0.64      0.65      1126
+
+The Classification Report Alchemy trained Relation Classifier
+              precision    recall  f1-score   support
+
+        Kill       0.23      0.81      0.36        47
+     Live_In       0.33      0.57      0.41       100
+  Located_In       0.25      0.80      0.38        94
+        None       0.34      0.06      0.10       704
+ OrgBased_In       0.31      0.69      0.43       105
+    Work_For       0.24      0.46      0.32        76
+
+    accuracy                           0.28      1126
+   macro avg       0.28      0.56      0.33      1126
+weighted avg       0.32      0.28      0.20      1126
+
+['Work_For', 'Live_In', 'Kill', 'Located_In', 'None', 'OrgBased_In']
+[[ 35   7   8   1  21   4]
+ [  3  57  11   7  18   4]
+ [  2   0  38   0   7   0]
+ [  0   2   1  75  12   4]
+ [104 103 108 204  39 146]
+ [  1   6   0   9  17  72]]
+None	Located_In	Located_In	This greatly eases the government 's policy that was decided upon at the August reunification-related ministers meeting in which it decided that ` businessmen will be allowed to visit North Korea only when North <I-Loc> Korea </I-Loc> completely returns to the Nuclear Nonproliferation Treaty and agrees to the inspection of unreported facilities in <B-Loc> Yongbyon. </B-Loc> ' 
+OrgBased_In	None	None	( Text ) <B-Loc> Beijing </B-Loc> , 23 Jun ( <B-Org> XINHUA </B-Org> ) -- Briefing the National People 's Congress ( NPC ) on " China 's 21st Century Agenda " today , Vice of the State Science and Technology Commission Deng Nan called for the final solution of environmental problems , adding that the economy must develop on a long-term basis , but if environmental problems are ignored in the process of development , economic development will be seriously hampered . 
+OrgBased_In	None	None	( Text ) Beijing , 23 Jun ( <B-Org> XINHUA </B-Org> ) -- Briefing the National People 's <I-Org> Congress </I-Org> ( NPC ) on " China 's 21st Century Agenda " today , Vice of the State Science and Technology Commission Deng Nan called for the final solution of environmental problems , adding that the economy must develop on a long-term basis , but if environmental problems are ignored in the process of development , economic development will be seriously hampered . 
+None	Live_In	Live_In	` ` What we have witnessed , in the Israeli retaliation in kind for the kidnapping of their people , ( is ) that violence truly does beget violence and that I hope the United States will use this opportunity for reconciliation rather than retaliation , ' ' Mrs. <I-Peop> Say </I-Peop> said in an interview from her home near Cadiz in western <B-Loc> Kentucky </B-Loc> . 
+None	Kill	Kill	<B-Peop> Lennon </B-Peop> and his wife were returning to their apartment in New York 's Dakota building from a recording session on Dec. 8 , 1980 , when he was shot to death by Mark David <I-Peop> Chapman </I-Peop> , an obsessed fan who had gotten his autograph only hours before . 
+None	Kill	Kill	<B-Peop> Lennon </B-Peop> was returning home with Ono after a recording session when Mark David <I-Peop> Chapman </I-Peop> , a fan who received the ex-Beatle 's autograph just hours before , shot and killed him . 
+None	Live_In	Live_In	Anastas Mikoyan , then <B-Loc> Soviet </B-Loc> first deputy premier , was the catalyst for the reversal of <B-Peop> Khrushchev </B-Peop> 's order , according to the authors . 
+None	Live_In	Live_In	But the authors suggested that <B-Peop> Alekseev </B-Peop> , along with others in the <B-Loc> Soviet </B-Loc> diplomatic corps , were not receiving accurate information from Moscow about the missiles . 
+Kill	None	None	Besides McCord , security chief of President Nixon 's 1972 campaign , Mr. <I-Peop> Fensterwald </I-Peop> 's big-name clients included James Earl <I-Peop> Ray </I-Peop> , the convicted assassin of the Rev. Martin Luther King Jr. ; 
+None	OrgBased_In	OrgBased_In	Working with <B-Loc> U.S. </B-Loc> Mike Norton on the case are Assistant Ken Fimberg of Denver and Peter Murtha , a special prosecutor in the environmental crime section of the Justice <I-Org> Department </I-Org> in Washington . 
+None	Located_In	Located_In	By year 's end , 6 million acres had burned in the <B-Loc> West </B-Loc> and Alaska , making 1988 the worst fire season in 30 years , and , in terms of firefighting resources committed , the most expensive in <B-Loc> U.S. </B-Loc> history , Sacher said . 
+None	Live_In	Live_In	Dole is at an organizational disadvantage in the South but has had his wife , <B-Peop> Elizabeth </B-Peop> , a native of North <I-Loc> Carolina </I-Loc> , working the region for him . 
+None	Live_In	Live_In	There are even hopeful signs in Chicago 's schools , branded 14 months ago as the nation 's worst by <B-Loc> U.S. </B-Loc> Secretary William J. <I-Peop> Bennett </I-Peop> . 
+Live_In	None	None	In 1911 , the 38th U.S. vice president , Hubert H. Humphrey , was born in Wallace , <I-Loc> S.D. </I-Loc> In 1929 , aviator Charles <I-Peop> Lindbergh </I-Peop> married Anne Spencer Morrow in Englewood , N.J. In 1935 , the Supreme Court struck down the National Industrial Recovery Act . 
+Live_In	None	None	In 1911 , the 38th U.S. vice president , Hubert H. Humphrey , was born in Wallace , S.D. In 1929 , aviator Charles <I-Peop> Lindbergh </I-Peop> married Anne Spencer Morrow in Englewood , <B-Loc> N.J. </B-Loc> In 1935 , the Supreme Court struck down the National Industrial Recovery Act . 
+None	Located_In	Located_In	In a travel advisory issued Monday , the State Department said there have been ` ` a few instances of attacks on tourists ' ' in <B-Loc> Kenya </B-Loc> , particularly ` ` along the coast south of <B-Loc> Mombasa </B-Loc> and in remote areas of the country , including some national parks . 
+None	Live_In	Live_In	The ` ` poison pill , ' ' ruled illegal in November by <B-Loc> U.S. </B-Loc> District G. Ernest <I-Peop> Tidwell </I-Peop> , would become effective after a shareholder had acquired 10 percent of the outstanding stock . 
+None	Live_In	Live_In	Photo , COLOR , The father of our 34th President was working as a railroad laborer when his son Dwight D. <I-Peop> Eisenhower </I-Peop> was born on Oct. 14 , 1890 , in a modest two-story frame house in Denison , <I-Loc> Tex </I-Loc> . 
+None	Live_In	Live_In	On Oct. 18 , 1921 , Jesse Alexander Helms <I-Peop> Jr. </I-Peop> was born to a policeman and his wife in <B-Loc> Monroe </B-Loc> , population 3 , 000 . 
+Located_In	None	None	There are also plantations in Huancabamba , Piura ; in Bagua and Condorcanqui , Amazonas ; and in several towns in San <I-Loc> Martin </I-Loc> Department , where cultivation has spread rapidly over the last few years in Nueva Cajamarca , Rioja , Soritor , and in the valleys of Mayo , <B-Loc> Sisa </B-Loc> , and Biabo . 
+Located_In	None	None	There are also plantations in Huancabamba , Piura ; in Bagua and Condorcanqui , Amazonas ; and in several towns in San Martin Department , where cultivation has spread rapidly over the last few years in Nueva Cajamarca , Rioja , Soritor , and in the valleys of <B-Loc> Mayo </B-Loc> , <B-Loc> Sisa </B-Loc> , and Biabo . 
+None	Live_In	Live_In	` ` If they tell us to get out , we get out , ' ' said Lutie <I-Peop> Dyson </I-Peop> , 62 , who with her husband and about 65 others took shelter in a school in Lake Charles , <I-Loc> La </I-Loc> . 
+None	Live_In	Live_In	` ` If they tell us to get out , we get out , ' ' said Lutie <I-Peop> Dyson </I-Peop> , 62 , who with her husband and about 65 others took shelter in a school in Lake <I-Loc> Charles </I-Loc> , La . 
+None	Live_In	Live_In	In the name of God , the Merciful , the Compassionate , Since criminal <B-Loc> America </B-Loc> and the Zionist enemy did not take our decision to execute American spy <B-Peop> Higgins </B-Peop> seriously , and since Sheik Abdul Karim Obeid and his two brethren were not freed by the specified deadline out of disdain for our ultimatum , the life of Higgins and our sacred sanctities , and to implement God 's just will , the execution of American spy Higgins has been carried out by hanging at 3 p.m. this Monday afternoon 28 Zul Hijja , 1409 Hegira , which coincides with 
+Live_In	Kill	Kill	John <I-Peop> Martini </I-Peop> , 58 , and Therese Afdahl , 30 , were arrested after being spotted by police at a Fort Lee motel Wednesday and were charged in the slaying of 58-year-old Irving <I-Peop> Flax </I-Peop> . 
+The Classification Report of  Base Classifier
+              precision    recall  f1-score   support
+
+         Loc       0.78      0.78      0.78       632
+         Org       0.67      0.72      0.70       439
+       Other       0.98      0.97      0.98      6628
+        Peop       0.82      0.87      0.84       690
+
+    accuracy                           0.94      8389
+   macro avg       0.81      0.84      0.82      8389
+weighted avg       0.94      0.94      0.94      8389
+
+The Classification Report Alchemy trained Base Classifier
+              precision    recall  f1-score   support
+
+         Loc       0.87      0.70      0.78       632
+         Org       0.78      0.72      0.75       439
+       Other       0.96      1.00      0.98      6628
+        Peop       0.88      0.72      0.79       690
+
+    accuracy                           0.94      8389
+   macro avg       0.87      0.79      0.82      8389
+weighted avg       0.94      0.94      0.94      8389
+
+['Peop', 'Org', 'O', 'Loc']
+[[497  42   0  29]
+ [ 23 318   0  37]
+ [  0   0   0   0]
+ [ 44  48   0 442]]
+Org	Other	Other	Provincial
+Org	Other	Other	Command
+Loc	Other	Other	Monday
+Peop	Other	Other	President
+Org	Other	Other	Nuclear
+Org	Other	Other	Nonproliferation
+Org	Other	Other	Treaty
+Peop	Other	Other	Mayor
+Loc	Other	Other	Arab
+Loc	Other	Other	Palestinians
+Loc	Other	Other	Armenian
+Org	Other	Other	Army
+Org	Other	Other	Agenda
+Peop	Other	Other	Vice
+Loc	Other	Other	American
+Loc	Other	Other	Dec.
+Loc	Other	Other	Contra
+Peop	Other	Other	O
+Peop	Other	Other	Investigator
+Org	Other	Other	Chancellor
+Loc	Other	Other	Israeli
+Org	Other	Other	Prime
+Org	Other	Other	Minister
+Loc	Other	Other	Canadian
+Loc	Other	Other	Cuban
+Org	Other	Other	Foreign
+Peop	Other	Other	President
+Peop	Other	Other	Nixon
+Loc	Other	Other	ex-Beatle
+Peop	Other	Other	Prison
+Org	Other	Other	Watergate
+Org	Other	Other	GATT
+Org	Other	Other	Article
+Org	Other	Other	III
+Org	Other	Other	National
+Org	Other	Other	Treaty
+Peop	Other	Other	Republican
+Org	Other	Other	Democrat
+Loc	Other	Other	Sandinistas
+Peop	Other	Other	Gov.
+Org	Other	Other	Middle
+Org	Other	Other	Eastern
+Peop	Other	Other	President
+Loc	Other	Other	Cuban
+Peop	Other	Other	Perhaps
+Org	Other	Other	DEM
+Peop	Other	Other	Besides
+Peop	Other	Other	Telephone
+Org	Other	Other	Assistant
+Loc	Other	Other	,
+Loc	Other	Other	Cobra
+Peop	Other	Other	Jail
+Loc	Other	Other	EDT
+Loc	Other	Other	South
+Org	Other	Other	of
+Peop	Other	Other	Thursday
+Loc	Other	Other	Cambodian
+Peop	Other	Other	Monday
+Peop	Other	Other	Sunday
+Peop	Other	Other	May
+Org	Other	Other	News
+Peop	Other	Other	Gov.
+Loc	Other	Other	Democrat
+Org	Other	Other	SRS
+Loc	Other	Other	Dr.
+Loc	Other	Other	Develop
+Loc	Other	Other	Receive
+Org	Other	Other	Secretary
+Org	Other	Other	Universal
+Org	Other	Other	Declaration
+Loc	Other	Other	Human
+Loc	Other	Other	Rights
+Org	Other	Other	National
+Org	Other	Other	Industrial
+Org	Other	Other	Recovery
+Org	Other	Other	Act
+Org	Other	Other	of
+Peop	Other	Other	Sen.
+Loc	Other	Other	Finandes
+Loc	Other	Other	Chilean
+Peop	Other	Other	Sheriff
+Peop	Other	Other	Lt.
+Org	Other	Other	State
+Org	Other	Other	Attorney
+Loc	Other	Other	D-Del.
+Peop	Other	Other	South
+Peop	Other	Other	Korean
+Peop	Other	Other	But
+Peop	Other	Other	However
+Peop	Other	Other	Monday
+Peop	Other	Other	With
+Loc	Other	Other	Phenergan
+Loc	Other	Other	,
+Loc	Other	Other	Arabic
+Loc	Other	Other	November
+Org	Other	Other	District
+Org	Other	Other	Energy
+Org	Other	Other	Department
+Peop	Other	Other	Saturday
+Loc	Other	Other	Iranian
+Peop	Other	Other	Korochkin
+Loc	Other	Other	Cambodian
+Org	Other	Other	Prime
+Loc	Other	Other	Photo
+Org	Other	Other	COLOR
+Loc	Other	Other	European
+Loc	Other	Other	Wallowa-Whitman
+Loc	Other	Other	Malheur
+Loc	Other	Other	Arrow
+Loc	Other	Other	Missile
+Loc	Other	Other	Tasks
+Org	Other	Other	ONLY
+Org	Other	Other	Dallas
+Org	Other	Other	County
+Org	Other	Other	Administration
+Peop	Other	Other	Building
+Loc	Other	Other	Libyan
+Org	Other	Other	American
+Peop	Other	Other	Under
+Loc	Other	Other	Kurds
+Peop	Other	Other	While
+Loc	Other	Other	Also
+Org	Other	Other	Mayor
+Org	Other	Other	Capt.
+Org	Other	Other	Signed
+Org	Other	Other	CCRI-CG
+Org	Other	Other	Dated
+Loc	Other	Other	Wednesday
+Loc	Other	Other	December
+Org	Other	Other	Commander
+Loc	Other	Other	Department
+Loc	Other	Other	,
+Loc	Other	Other	Russians
+Loc	Other	Other	Russian
+Loc	Other	Other	Chinese-Soviet
+Loc	Other	Other	Chinese
+Peop	Other	Other	Monday
+Loc	Other	Other	Needs
+Loc	Other	Other	All
+Peop	Other	Other	Scientists
+Peop	Other	Other	Believe
+Org	Other	Other	Russian
+Org	Other	Other	Historical
+Org	Other	Other	Sciences
+Org	Other	Other	Peace
+Loc	Other	Other	Russia
+Org	Other	Other	Interests
+Peop	Other	Other	Gov.
+Peop	Other	Other	On
+Peop	Other	Other	Monday
+Loc	Other	Other	Armenian
+Loc	Other	Other	Poles
+Loc	Other	Other	Highlight
+Loc	Other	Other	,
+Loc	Other	Other	Agenda
+Org	Other	Other	SRP
+Peop	Other	Other	Marine
+Peop	Other	Other	Lt.
+Org	Other	Other	Dallas
+Org	Other	Other	County
+Org	Other	Other	Administration
+Org	Other	Other	Building
+Peop	Other	Other	God
+Loc	Other	Other	Merciful
+Loc	Other	Other	Compassionate
+Org	Other	Other	Since
+Loc	Other	Other	Zionist
+Peop	Other	Other	Sheik
+Peop	Other	Other	God
+Org	Other	Other	American
+Loc	Other	Other	Hegira
+Loc	Other	Other	Challenger
+Loc	Other	Other	Fort
+Loc	Other	Other	Lee
+Peop	Other	Other	Wednesday
+Peop	Other	Other	Lt.
+Peop	Other	Other	Judge
+Peop	Other	Other	Acting
+Peop	Other	Other	Wednesday
+Org	Other	Other	PDAM
+Peop	Other	Other	BASA
+Loc	Other	Other	March
+Loc	Other	Other	Polls
+Peop	Other	Other	London
+Peop	Other	Other	Monday
+Loc	Other	Other	Mexican
+Org	Other	Other	Chairman
+Org	Other	Other	Events
+Peop	Other	Other	Dr.
+Peop	Other	Other	North
+Peop	Other	Other	Korean
+Org	Other	Other	of
+Loc	Other	Other	Canadian
+

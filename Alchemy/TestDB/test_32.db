@@ -1,0 +1,6 @@
+Etype(32,0,Peop)
+Etype(32,1,Peop)
+Etype(32,2,Peop)
+Etype(32,11,Peop)
+Etype(32,12,Peop)
+Rtype(32,2,12,Kill)

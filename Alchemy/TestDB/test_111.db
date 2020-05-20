@@ -1,0 +1,5 @@
+Etype(111,0,Other)
+Etype(111,3,Loc)
+Etype(111,4,Loc)
+Etype(111,17,Other)
+Rtype(111,0,4,None)

@@ -1,0 +1,8 @@
+Etype(256,24,Peop)
+Etype(256,25,Peop)
+Etype(256,29,Org)
+Etype(256,30,Org)
+Etype(256,31,Org)
+Etype(256,32,Org)
+Etype(256,33,Org)
+Rtype(256,25,33,Work_For)

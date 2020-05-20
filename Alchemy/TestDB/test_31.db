@@ -1,0 +1,8 @@
+Etype(31,34,Org)
+Etype(31,35,Loc)
+Etype(31,48,Peop)
+Etype(31,49,Peop)
+Etype(31,58,Loc)
+Etype(31,61,Loc)
+Rtype(31,49,61,None)
+Rtype(31,58,61,Located_In)

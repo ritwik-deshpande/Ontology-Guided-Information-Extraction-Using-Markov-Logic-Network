@@ -1,0 +1,8 @@
+Etype(232,1,Other)
+Etype(232,10,Loc)
+Etype(232,17,Loc)
+Etype(232,19,Loc)
+Etype(232,20,Org)
+Etype(232,21,Peop)
+Etype(232,26,Loc)
+Rtype(232,21,17,None)

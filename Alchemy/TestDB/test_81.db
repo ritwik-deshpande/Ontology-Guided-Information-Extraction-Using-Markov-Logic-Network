@@ -1,0 +1,6 @@
+Etype(81,30,Other)
+Etype(81,31,Peop)
+Etype(81,33,Peop)
+Etype(81,34,Peop)
+Etype(81,35,Peop)
+Rtype(81,35,31,Kill)

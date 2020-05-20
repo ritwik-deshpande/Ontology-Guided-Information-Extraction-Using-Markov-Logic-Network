@@ -1,0 +1,5 @@
+Etype(77,0,Peop)
+Etype(77,15,Peop)
+Etype(77,20,Loc)
+Etype(77,21,Loc)
+Rtype(77,15,21,None)

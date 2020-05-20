@@ -1,0 +1,7 @@
+Etype(274,0,Peop)
+Etype(274,1,Peop)
+Etype(274,3,Peop)
+Etype(274,17,Org)
+Etype(274,18,Org)
+Etype(274,19,Peop)
+Rtype(274,3,1,Kill)

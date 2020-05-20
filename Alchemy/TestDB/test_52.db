@@ -1,0 +1,6 @@
+Etype(52,1,Peop)
+Etype(52,4,Peop)
+Etype(52,10,Loc)
+Etype(52,17,Loc)
+Etype(52,20,Peop)
+Rtype(52,1,4,Kill)

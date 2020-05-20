@@ -1,0 +1,8 @@
+Etype(179,13,Peop)
+Etype(179,14,Peop)
+Etype(179,17,Org)
+Etype(179,18,Org)
+Etype(179,19,Org)
+Etype(179,21,Loc)
+Rtype(179,14,21,Live_In)
+Rtype(179,19,21,OrgBased_In)

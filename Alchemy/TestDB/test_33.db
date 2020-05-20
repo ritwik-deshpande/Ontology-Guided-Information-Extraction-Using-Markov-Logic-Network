@@ -1,0 +1,8 @@
+Etype(33,3,Org)
+Etype(33,4,Org)
+Etype(33,8,Peop)
+Etype(33,9,Peop)
+Etype(33,25,Loc)
+Etype(33,31,Org)
+Etype(33,32,Peop)
+Rtype(33,9,4,Work_For)

@@ -1,0 +1,7 @@
+Etype(57,7,Peop)
+Etype(57,8,Peop)
+Etype(57,9,Peop)
+Etype(57,22,Peop)
+Etype(57,23,Peop)
+Etype(57,25,Peop)
+Rtype(57,23,25,Kill)

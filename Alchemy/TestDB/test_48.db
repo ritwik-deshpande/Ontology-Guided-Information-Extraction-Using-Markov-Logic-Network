@@ -1,0 +1,8 @@
+Etype(48,0,Peop)
+Etype(48,1,Peop)
+Etype(48,2,Peop)
+Etype(48,6,Peop)
+Etype(48,7,Peop)
+Etype(48,8,Peop)
+Etype(48,9,Peop)
+Rtype(48,2,9,Kill)

@@ -1,0 +1,5 @@
+Etype(141,8,Org)
+Etype(141,9,Org)
+Etype(141,26,Loc)
+Etype(141,36,Loc)
+Rtype(141,36,26,None)

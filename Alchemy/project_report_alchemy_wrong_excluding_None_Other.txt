@@ -1,0 +1,233 @@
+ 'recall', 'true', average, warn_for)
+              precision    recall  f1-score   support
+
+        Kill       0.74      0.74      0.74        47
+     Live_In       0.73      0.49      0.59       100
+  Located_In       0.84      0.77      0.80        94
+        None       0.00      0.00      0.00         0
+ OrgBased_In       0.86      0.68      0.76       105
+    Work_For       0.86      0.49      0.62        76
+
+    accuracy                           0.63       422
+   macro avg       0.67      0.53      0.58       422
+weighted avg       0.81      0.63      0.70       422
+
+The Classification Report Alchemy trained Relation Classifier
+              precision    recall  f1-score   support
+
+        Kill       0.66      0.81      0.72        47
+     Live_In       0.79      0.57      0.66       100
+  Located_In       0.82      0.80      0.81        94
+        None       0.00      0.00      0.00         0
+ OrgBased_In       0.86      0.69      0.76       105
+    Work_For       0.85      0.46      0.60        76
+
+    accuracy                           0.66       422
+   macro avg       0.66      0.55      0.59       422
+weighted avg       0.81      0.66      0.71       422
+
+['Work_For', 'Live_In', 'Kill', 'Located_In', 'None', 'OrgBased_In']
+[[35  7  8  1 21  4]
+ [ 3 57 11  7 18  4]
+ [ 2  0 38  0  7  0]
+ [ 0  2  1 75 12  4]
+ [ 0  0  0  0  0  0]
+ [ 1  6  0  9 17 72]]
+
+
+Classifier  Alchemy    Actual     Sentence
+
+
+Live_In	Kill	Live_In	One was <B-Peop> Idaho </B-Peop> Gov. Cecil <I-Peop> Andrus </I-Peop> , who said he needed to deal with forest fires that have become ` ` totally out of control. ' ' 
+Live_In	Kill	Live_In	` ` Temperatures didn 't get too low , but the wind chill was bad , ' ' said Bingham <I-Peop> County </I-Peop> Sheriff 's Lt. Bill <I-Peop> Gordon </I-Peop> . 
+Work_For	Kill	Work_For	Wyatt <I-Peop> McCauley </I-Peop> , spokesman for CH2M <I-Peop> Hill </I-Peop> , did not immediately return a phone call to his office in Denver . 
+Work_For	Kill	Work_For	` ` The U.S. has the biggest stock of chemical arms in the world , and it is trying to obstruct other countries from having their own , ' ' said Arab <I-Peop> League </I-Peop> Secretary-General Chedli <I-Peop> Klibi </I-Peop> . 
+Live_In	Kill	Live_In	One was <B-Peop> Idaho </B-Peop> Gov. Cecil <I-Peop> Andrus </I-Peop> , who said he needed to deal with forest fires that have become ` ` totally out of control. ' ' 
+The Classification Report of  Base Classifier
+              precision    recall  f1-score   support
+
+         Loc       0.88      0.78      0.83       632
+           O       0.00      0.00      0.00         0
+         Org       0.78      0.72      0.75       439
+       Other       0.00      0.00      0.00         0
+        Peop       0.89      0.87      0.88       690
+
+    accuracy                           0.80      1761
+   macro avg       0.51      0.47      0.49      1761
+weighted avg       0.86      0.80      0.83      1761
+
+The Classification Report Alchemy trained Base Classifier
+              precision    recall  f1-score   support
+
+         Loc       0.87      0.70      0.78       632
+         Org       0.78      0.72      0.75       439
+       Other       0.00      0.00      0.00         0
+        Peop       0.88      0.72      0.79       690
+
+    accuracy                           0.71      1761
+   macro avg       0.63      0.54      0.58      1761
+weighted avg       0.85      0.71      0.78      1761
+
+['Peop', 'Org', 'O', 'Loc']
+[[497  42   0  29]
+ [ 23 318   0  37]
+ [  0   0   0   0]
+ [ 44  48   0 442]]
+
+Classifier  Alchemy    Actual   Word
+
+
+Peop	Other	Peop	Booth
+Loc	Other	Loc	Namialo
+Loc	Other	Loc	Nampula
+Loc	Other	Loc	Province
+Peop	Other	Peop	James
+Loc	Other	Loc	Tenn.
+Peop	Other	Peop	Martin
+Peop	Other	Peop	Ruby
+Peop	Other	Peop	Martin
+Loc	Other	Loc	U.S.
+Peop	Other	Peop	Anderson
+Peop	Other	Peop	Vaness
+Peop	Other	Peop	Sen.
+Peop	Other	Peop	F.
+Peop	Other	Peop	Kennedy
+Peop	Other	Peop	Lee
+Peop	Other	Peop	Harvey
+Peop	Other	Peop	Bakker
+Peop	Other	Peop	Albert
+Peop	Other	Peop	O.
+Peop	Other	Peop	Fournier
+Loc	Other	Loc	Beijing
+Peop	Other	Peop	Reagan
+Peop	Other	Peop	Ralph
+Peop	Other	Peop	K.
+Peop	Other	Peop	Winter
+Loc	Other	Loc	York
+Peop	Other	Peop	Kenneth
+Peop	Other	Peop	Starr
+Peop	Other	Peop	Kleber
+Peop	Other	Peop	Bustamante
+Loc	Other	Loc	Garcia
+Peop	Other	Peop	Antonio
+Loc	Other	Loc	Pacific
+Peop	Other	Peop	Branstad
+Loc	Other	Loc	Idaho
+Peop	Other	Peop	Sen.
+Loc	Other	Loc	Mexico
+Peop	Other	Peop	Sirhan
+Peop	Other	Peop	Johnson
+Peop	Other	Peop	McCord
+Peop	Other	Peop	Mr.
+Peop	Other	Peop	Fensterwald
+Peop	Other	Peop	Jr.
+Peop	Other	Peop	Mike
+Peop	Other	Peop	Murtha
+Peop	Other	Peop	Wilkes
+Peop	Other	Peop	Garber
+Loc	Other	Loc	Cape
+Peop	Other	Peop	Vojnic
+Peop	Other	Peop	Milan
+Peop	Other	Peop	Samuel
+Peop	Other	Peop	H.
+Loc	Other	Loc	,
+Loc	Other	Loc	S.D.
+Peop	Other	Peop	Lindbergh
+Peop	Other	Peop	Spencer
+Peop	Other	Peop	Morrow
+Loc	Other	Loc	N.J.
+Peop	Other	Peop	Hutson
+Loc	Other	Loc	Sao
+Loc	Other	Loc	Paulo
+Peop	Other	Peop	Datuk
+Peop	Other	Peop	Mahathir
+Peop	Other	Peop	Nelson
+Peop	Other	Peop	Mandela
+Peop	Other	Peop	de
+Peop	Other	Peop	Klerk
+Loc	Other	Loc	,
+Peop	Other	Peop	Kim
+Peop	Other	Peop	Sirhan
+Loc	Other	Loc	Texas
+Loc	Other	Loc	,
+Loc	Other	Loc	N.Y.
+Peop	Other	Peop	Wolfgang
+Peop	Other	Peop	Mozart
+Loc	Other	Loc	Austria
+Loc	Other	Loc	United
+Loc	Other	Loc	Westmoreland
+Loc	Other	Loc	Bratislava
+Loc	Other	Loc	Hungarian
+Loc	Other	Loc	Embassy
+Loc	Other	Loc	United
+Loc	Other	Loc	South
+Loc	Other	Loc	Ohio
+Peop	Other	Peop	Kuzmenko
+Peop	Other	Peop	Stanislav
+Peop	Other	Peop	Mikhaylovich
+Peop	Other	Peop	Korochkin
+Peop	Other	Peop	Mikhaylovich
+Loc	Other	Loc	Washington
+Loc	Other	Loc	Okhotsk
+Loc	Other	Loc	Sea
+Loc	Other	Loc	Washington
+Loc	Other	Loc	Bering
+Peop	Other	Peop	Bette
+Loc	Other	Loc	Kebara
+Peop	Other	Peop	Bert
+Loc	Other	Loc	Republic
+Loc	Other	Loc	Houston
+Loc	Other	Loc	Air
+Loc	Other	Loc	Condorcanqui
+Loc	Other	Loc	Nueva
+Loc	Other	Loc	Cajamarca
+Loc	Other	Loc	Rioja
+Loc	Other	Loc	Soritor
+Loc	Other	Loc	Mayo
+Loc	Other	Loc	Sisa
+Loc	Other	Loc	Biabo
+Loc	Other	Loc	Algeria
+Peop	Other	Peop	Ray
+Peop	Other	Peop	Martin
+Peop	Other	Peop	King
+Peop	Other	Peop	Lee
+Peop	Other	Peop	Harvey
+Peop	Other	Peop	Sen.
+Peop	Other	Peop	F.
+Peop	Other	Peop	Kennedy
+Peop	Other	Peop	Bishara
+Peop	Other	Peop	Sirhan
+Peop	Other	Peop	Harvey
+Peop	Other	Peop	Oswald
+Peop	Other	Peop	Kennedy
+Peop	Other	Peop	Oswald
+Peop	Other	Peop	Oswald
+Loc	Other	Loc	Ottawa
+Peop	Other	Peop	Higgins
+Peop	Other	Peop	Higgins
+Loc	Other	Loc	Ignacio
+Peop	Other	Peop	Jack
+Peop	Other	Peop	President
+Peop	Other	Peop	John
+Peop	Other	Peop	Kennedy
+Peop	Other	Peop	John
+Peop	Other	Peop	Lee
+Peop	Other	Peop	Harvard
+Peop	Other	Peop	Oswald
+Peop	Other	Peop	Kennedy
+Peop	Other	Peop	Danny
+Peop	Other	Peop	Sirhan
+Peop	Other	Peop	F.
+Peop	Other	Peop	Kennedy
+Peop	Other	Peop	Dole
+Peop	Other	Peop	John
+Peop	Other	Peop	President
+Peop	Other	Peop	James
+Peop	Other	Peop	Earl
+Peop	Other	Peop	Dr.
+Peop	Other	Peop	Harvey
+Peop	Other	Peop	Oswald
+Peop	Other	Peop	Kennedy
+Loc	Other	Loc	Jakarta
+Loc	Other	Loc	States
+

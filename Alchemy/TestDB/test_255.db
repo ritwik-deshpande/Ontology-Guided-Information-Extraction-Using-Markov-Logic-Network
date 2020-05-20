@@ -1,0 +1,5 @@
+Etype(255,3,Org)
+Etype(255,4,Org)
+Etype(255,6,Loc)
+Etype(255,7,Peop)
+Rtype(255,7,4,Work_For)

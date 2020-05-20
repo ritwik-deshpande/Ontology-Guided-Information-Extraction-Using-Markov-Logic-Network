@@ -1,0 +1,7 @@
+Etype(8,0,Other)
+Etype(8,5,Loc)
+Etype(8,6,Other)
+Etype(8,13,Loc)
+Etype(8,14,Other)
+Etype(8,16,Loc)
+Rtype(8,14,16,Located_In)

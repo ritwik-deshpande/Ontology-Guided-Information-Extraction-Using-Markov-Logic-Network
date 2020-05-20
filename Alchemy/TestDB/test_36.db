@@ -1,0 +1,6 @@
+Etype(36,0,Peop)
+Etype(36,5,Loc)
+Etype(36,11,Peop)
+Etype(36,12,Peop)
+Etype(36,13,Peop)
+Rtype(36,13,0,None)

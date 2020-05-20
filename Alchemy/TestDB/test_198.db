@@ -1,0 +1,8 @@
+Etype(198,17,Peop)
+Etype(198,18,Peop)
+Etype(198,21,Org)
+Etype(198,22,Org)
+Etype(198,23,Org)
+Etype(198,26,Loc)
+Rtype(198,18,23,Work_For)
+Rtype(198,23,26,OrgBased_In)

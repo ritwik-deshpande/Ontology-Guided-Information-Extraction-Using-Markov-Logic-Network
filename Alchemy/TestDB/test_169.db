@@ -1,0 +1,7 @@
+Etype(169,19,Peop)
+Etype(169,20,Peop)
+Etype(169,21,Peop)
+Etype(169,37,Loc)
+Etype(169,38,Loc)
+Etype(169,39,Loc)
+Rtype(169,21,39,None)

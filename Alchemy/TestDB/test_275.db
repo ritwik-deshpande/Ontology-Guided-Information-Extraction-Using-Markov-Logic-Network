@@ -1,0 +1,8 @@
+Etype(275,0,Peop)
+Etype(275,1,Peop)
+Etype(275,2,Peop)
+Etype(275,11,Loc)
+Etype(275,13,Loc)
+Etype(275,14,Other)
+Etype(275,15,Loc)
+Rtype(275,15,11,Located_In)

@@ -7,17 +7,5 @@ RFtype(sid,tid,tid,rel)
 Etype(s,t,+tk) => EFtype(s,t,tk)
 Rtype(s,t1,t2,+rl) => RFtype(s,t1,t2,rl)
 
-EFtype(s,t1,Peop) ^ Rtype(s,t1,t2,Work_For) => EFtype(s,t2,Org)
-EFtype(s,t1,Peop) ^ Rtype(s,t1,t2,Live_In) => EFtype(s,t2,Loc)
-EFtype(s,t1,Peop) ^ Rtype(s,t1,t2,Kill) => EFtype(s,t2,Peop)
-EFtype(s,t1,Loc) ^ Rtype(s,t1,t2,Located_In) => EFtype(s,t2,Loc)
-EFtype(s,t1,Org) ^ Rtype(s,t1,t2,OrgBased_In) => EFtype(s,t2,Loc)
-
-EFtype(s,t2,Org) ^ Rtype(s,t1,t2,Work_For) => EFtype(s,t1,Peop)
-EFtype(s,t2,Loc) ^ Rtype(s,t1,t2,Live_In) => EFtype(s,t1,Peop)
-EFtype(s,t2,Peop) ^ Rtype(s,t1,t2,Kill) => EFtype(s,t1,Peop)
-EFtype(s,t2,Loc) ^ Rtype(s,t1,t2,Located_In) => EFtype(s,t1,Loc)
-EFtype(s,t2,Loc) ^ Rtype(s,t1,t2,OrgBased_In) => EFtype(s,t1,Org)
-
 
 

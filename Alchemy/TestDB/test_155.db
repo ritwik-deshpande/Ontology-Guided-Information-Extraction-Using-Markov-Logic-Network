@@ -1,0 +1,4 @@
+Etype(155,0,Peop)
+Etype(155,9,Loc)
+Etype(155,11,Loc)
+Rtype(155,9,11,Located_In)

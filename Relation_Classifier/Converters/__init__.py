@@ -1,1 +1,1 @@
-from .converters import getRelations,getGoldTruth,getGoldTruthTest,getIndexes
+from .converters import getRelations,getGoldTruth,getGoldTruthTest,getSentenceRelationPairs

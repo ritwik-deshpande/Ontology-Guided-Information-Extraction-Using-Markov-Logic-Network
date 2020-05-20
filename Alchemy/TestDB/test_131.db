@@ -1,0 +1,6 @@
+Etype(131,5,Peop)
+Etype(131,6,Peop)
+Etype(131,7,Peop)
+Etype(131,16,Loc)
+Etype(131,17,Loc)
+Rtype(131,7,17,Live_In)

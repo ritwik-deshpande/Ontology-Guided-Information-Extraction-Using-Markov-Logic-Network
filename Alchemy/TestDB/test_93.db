@@ -1,0 +1,6 @@
+Etype(93,2,Org)
+Etype(93,5,Peop)
+Etype(93,6,Peop)
+Etype(93,12,Loc)
+Etype(93,18,Loc)
+Rtype(93,6,12,Live_In)

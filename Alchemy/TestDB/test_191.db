@@ -1,0 +1,6 @@
+Etype(191,0,Loc)
+Etype(191,9,Loc)
+Etype(191,10,Loc)
+Etype(191,26,Loc)
+Rtype(191,10,9,Located_In)
+Rtype(191,10,26,None)

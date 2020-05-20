@@ -1,6 +1,6 @@
 import keras
 from Parsers import getDocuments
-from Converters import getGoldTruthTest,getGoldTruth,getIndexes,getRelations
+from Converters import getGoldTruthTest,getGoldTruth,getRelations,getSentenceRelationPairs
 from KerasTextClassifier.models import KerasTextClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, classification_report, accuracy_score, confusion_matrix
@@ -18,17 +18,26 @@ if __name__ == '__main__':
     relations_test = getRelations(documents_test)
     gold_truths_test,tr_te,ts_te = getGoldTruth(relations_test,documents_test)
     n_relations = len(set(tr_tr))
+
+
+    # print(relations_test)
+
+    # # print(documents_test)
+
+    # print(gold_truths_test)
+    # print(tr_te)
+    # print(ts_te)
 	
     if sys.argv[1] == 'train':
         
-        kclf = KerasTextClassifier(input_length=50, n_classes=n_relations, max_words=15000)
+        kclf = KerasTextClassifier(input_length=100, n_classes=n_relations, max_words=15000)
         tr_sent, te_sent, tr_rel, te_rel = train_test_split(ts_tr, tr_tr, test_size=0.1)
-        kclf.fit(X=tr_sent, y=tr_rel, X_val=te_sent, y_val=te_rel,batch_size=64, lr=0.001, epochs=50)
+        kclf.fit(X=tr_sent, y=tr_rel, X_val=te_sent, y_val=te_rel,batch_size=64, lr=0.001, epochs=43)
         kclf.save()
 
     if sys.argv[1] == 'test':
   
-        kclf = KerasTextClassifier(input_length=50, n_classes=n_relations, max_words=15000)
+        kclf = KerasTextClassifier(input_length=100, n_classes=n_relations, max_words=15000)
         kclf.load()
         label_to_use = list(kclf.encoder.classes_)
         pointer = 0;
@@ -37,7 +46,7 @@ if __name__ == '__main__':
         actual_tags=[]
         predicted_tags=[]
 
-        with open('../Data/relation_classifier_test.csv', 'w', newline='') as file:
+        with open('../Data/relation_classifier_test_base.csv', 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(["SentenceID","token1","token2","Sentence","Predicted","Gold Truth"])
             for sentenceID in range(0,288):
@@ -45,15 +54,27 @@ if __name__ == '__main__':
                 gold_truth_indexes =[]
                 y_test_pred = []
                 data_to_send = data.loc[data['SentenceID'] == sentenceID+1]
-                input_sentences,gold_truth_indexes = getIndexes(data_to_send,"Gold Truth",pointer)
+
+                # input_sentences,gold_truth_indexes = getIndexes(data_to_send,"Gold Truth",pointer)
+                input_sentences,input_relations,token_pairs = getSentenceRelationPairs(sentenceID,data_to_send,gold_truths_test,pointer)
+
+
                 pointer = pointer + len(data_to_send['Word'])
-                if len(gold_truth_indexes) > 0:
-                    y_test_pred = kclf.predict(input_sentences)
-                    for i in range(0,len(y_test_pred)):
-                        writer.writerow([sentenceID+1,gold_truth_indexes[i][0],gold_truth_indexes[i][1],input_sentences[i],label_to_use[y_test_pred[i]]
-                                                                                                                     ,getGoldTruthTest(gold_truths_test,sentenceID,gold_truth_indexes[i])])
-                        predicted_tags.append(label_to_use[y_test_pred[i]])
-                        actual_tags.append(getGoldTruthTest(gold_truths_test,sentenceID,gold_truth_indexes[i]))
+
+                # print("The input_sentences are",input_sentences)
+                # print("The input_relations",input_relations)
+                # print("Token pairs",token_pairs)
+              
+                
+                y_test_pred = kclf.predict(input_sentences)
+                for i in range(0,len(y_test_pred)):
+                    writer.writerow([sentenceID+1,token_pairs[i][0],token_pairs[i][1],input_sentences[i],label_to_use[y_test_pred[i]],input_relations[i]])
+                    
+
+                    # print(token_pairs[i][0],token_pairs[i][1])
+                    predicted_tags.append(label_to_use[y_test_pred[i]])
+
+                    actual_tags.append(input_relations[i])
 
         print("relation_classifier_test.csv has been created")							
         print('classification_report: \n',classification_report(actual_tags,predicted_tags,digits=3))

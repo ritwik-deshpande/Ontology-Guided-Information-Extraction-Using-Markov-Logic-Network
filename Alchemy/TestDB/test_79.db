@@ -1,0 +1,8 @@
+Etype(79,18,Loc)
+Etype(79,22,Peop)
+Etype(79,23,Peop)
+Etype(79,28,Org)
+Etype(79,29,Org)
+Etype(79,30,Org)
+Etype(79,32,Org)
+Rtype(79,30,32,None)

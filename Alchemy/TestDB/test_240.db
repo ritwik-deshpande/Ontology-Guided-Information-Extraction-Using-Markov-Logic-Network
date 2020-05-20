@@ -1,0 +1,8 @@
+Etype(240,17,Peop)
+Etype(240,18,Peop)
+Etype(240,36,Loc)
+Etype(240,37,Loc)
+Etype(240,39,Loc)
+Rtype(240,18,39,None)
+Rtype(240,18,37,None)
+Rtype(240,37,39,Located_In)

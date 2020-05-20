@@ -4,72 +4,40 @@ RFtype(sid,tid,tid,rel)
 Etype(sid,tid,token)
 Rtype(sid,tid,tid,rel)
 
-// 6.03114  Etype(s,t,Peop) => EFtype(s,t,tk)
-6.03114  !Etype(a1,a2,Peop) v EFtype(a1,a2,Peop)
+//8.18563  !Etype(a1,a2,Other) v EFtype(a1,a2,Other)
+8.18563  !Etype(a1,a2,Other) v EFtype(a1,a2,Other)
 
-// 5.68008  Etype(s,t,Org) => EFtype(s,t,tk)
-5.68008  !Etype(a1,a2,Org) v EFtype(a1,a2,Org)
+// 4.78437  Etype(s,t,Peop) => EFtype(s,t,tk)
+6.78437  !Etype(a1,a2,Peop) v EFtype(a1,a2,Peop)
 
-// 5.70479  Etype(s,t,Loc) => EFtype(s,t,tk)
-5.70479  !Etype(a1,a2,Loc) v EFtype(a1,a2,Loc)
+// 5.03592  Etype(s,t,Org) => EFtype(s,t,tk)
+7.03592  !Etype(a1,a2,Org) v EFtype(a1,a2,Org)
 
-// 1.67107  Rtype(s,t1,t2,Work_For) => RFtype(s,t1,t2,rl)
-1.67107  !Rtype(a1,a2,a3,Work_For) v RFtype(a1,a2,a3,Work_For)
+// 5.82749  Etype(s,t,Loc) => EFtype(s,t,tk)
+6.82749  !Etype(a1,a2,Loc) v EFtype(a1,a2,Loc)
 
-// 1.6907  Rtype(s,t1,t2,Live_In) => RFtype(s,t1,t2,rl)
-1.6907  !Rtype(a1,a2,a3,Live_In) v RFtype(a1,a2,a3,Live_In)
+// 1.82458  Rtype(s,t1,t2,Work_For) => RFtype(s,t1,t2,rl)
+1.82458  !Rtype(a1,a2,a3,Work_For) v RFtype(a1,a2,a3,Work_For)
 
-// 1.65217  Rtype(s,t1,t2,Kill) => RFtype(s,t1,t2,rl)
-1.65217  !Rtype(a1,a2,a3,Kill) v RFtype(a1,a2,a3,Kill)
+// 1.86684  Rtype(s,t1,t2,Live_In) => RFtype(s,t1,t2,rl)
+1.86684  !Rtype(a1,a2,a3,Live_In) v RFtype(a1,a2,a3,Live_In)
 
-// 1.71835  Rtype(s,t1,t2,Located_In) => RFtype(s,t1,t2,rl)
-1.71835  !Rtype(a1,a2,a3,Located_In) v RFtype(a1,a2,a3,Located_In)
+// 1.75081  Rtype(s,t1,t2,Kill) => RFtype(s,t1,t2,rl)
+1.75081  !Rtype(a1,a2,a3,Kill) v RFtype(a1,a2,a3,Kill)
 
-// 1.73054  Rtype(s,t1,t2,OrgBased_In) => RFtype(s,t1,t2,rl)
-1.73054  !Rtype(a1,a2,a3,OrgBased_In) v RFtype(a1,a2,a3,OrgBased_In)
+// 1.93113  Rtype(s,t1,t2,Located_In) => RFtype(s,t1,t2,rl)
+1.93113  !Rtype(a1,a2,a3,Located_In) v RFtype(a1,a2,a3,Located_In)
 
-// 3.13233  Rtype(s,t1,t2,None) => RFtype(s,t1,t2,rl)
-3.13233  !Rtype(a1,a2,a3,None) v RFtype(a1,a2,a3,None)
+// 2.0172  Rtype(s,t1,t2,OrgBased_In) => RFtype(s,t1,t2,rl)
+2.0172  !Rtype(a1,a2,a3,OrgBased_In) v RFtype(a1,a2,a3,OrgBased_In)
 
-// 0.602176  EFtype(s,t1,Peop) ^ Rtype(s,t1,t2,Work_For) => EFtype(s,t2,Org)
-0.602176  EFtype(a1,a2,Org) v !EFtype(a1,a3,Peop) v !Rtype(a1,a3,a2,Work_For)
+// 2.76281  Rtype(s,t1,t2,None) => RFtype(s,t1,t2,rl)
+2.76281  !Rtype(a1,a2,a3,None) v RFtype(a1,a2,a3,None)
 
-// -0.194351  EFtype(s,t1,Peop) ^ Rtype(s,t1,t2,Live_In) => EFtype(s,t2,Loc)
--0.194351  EFtype(a1,a2,Loc) v !EFtype(a1,a3,Peop) v !Rtype(a1,a3,a2,Live_In)
+EFtype(s,t1,Peop) ^ EFtype(s,t2,Peop) => RFtype(s,t1,t2,Kill).
+EFtype(s,t1,Loc) ^ EFtype(s,t2,Loc) => RFtype(s,t1,t2,Located_In).
+EFtype(s,t1,Peop) ^ EFtype(s,t2,Org) => RFtype(s,t1,t2,Work_For).
+EFtype(s,t1,Org) ^ EFtype(s,t2,Loc) => RFtype(s,t1,t2,OrgBased_In).
+EFtype(s,t1,Peop) ^ EFtype(s,t2,Loc) => RFtype(s,t1,t2,Live_In).
 
-// 0.430629  EFtype(s,t1,Peop) ^ Rtype(s,t1,t2,Kill) => EFtype(s,t2,Peop)
-0.430629  EFtype(a1,a2,Peop) v !EFtype(a1,a3,Peop) v !Rtype(a1,a3,a2,Kill)
-
-// -0.702829  EFtype(s,t1,Loc) ^ Rtype(s,t1,t2,Located_In) => EFtype(s,t2,Loc)
--0.702829  EFtype(a1,a2,Loc) v !EFtype(a1,a3,Loc) v !Rtype(a1,a3,a2,Located_In)
-
-// -0.892077  EFtype(s,t1,Org) ^ Rtype(s,t1,t2,OrgBased_In) => EFtype(s,t2,Loc)
--0.892077  EFtype(a1,a2,Loc) v !EFtype(a1,a3,Org) v !Rtype(a1,a3,a2,OrgBased_In)
-
-// 0.479366  EFtype(s,t2,Org) ^ Rtype(s,t1,t2,Work_For) => EFtype(s,t1,Peop)
-0.479366  EFtype(a1,a2,Peop) v !EFtype(a1,a3,Org) v !Rtype(a1,a2,a3,Work_For)
-
-// 0.403953  EFtype(s,t2,Loc) ^ Rtype(s,t1,t2,Live_In) => EFtype(s,t1,Peop)
-0.403953  EFtype(a1,a2,Peop) v !EFtype(a1,a3,Loc) v !Rtype(a1,a2,a3,Live_In)
-
-// 0.504658  EFtype(s,t2,Peop) ^ Rtype(s,t1,t2,Kill) => EFtype(s,t1,Peop)
-0.504658  EFtype(a1,a2,Peop) v !EFtype(a1,a3,Peop) v !Rtype(a1,a2,a3,Kill)
-
-// -0.316438  EFtype(s,t2,Loc) ^ Rtype(s,t1,t2,Located_In) => EFtype(s,t1,Loc)
--0.316438  EFtype(a1,a2,Loc) v !EFtype(a1,a3,Loc) v !Rtype(a1,a2,a3,Located_In)
-
-// -0.128148  EFtype(s,t2,Loc) ^ Rtype(s,t1,t2,OrgBased_In) => EFtype(s,t1,Org)
--0.128148  EFtype(a1,a2,Org) v !EFtype(a1,a3,Loc) v !Rtype(a1,a2,a3,OrgBased_In)
-
-// 1.19599  Etype(a1,a2,a3)
-1.19599  Etype(a1,a2,a3)
-
-// -4.68687  EFtype(a1,a2,a3)
--4.68687  EFtype(a1,a2,a3)
-
-// -5.20557  Rtype(a1,a2,a3,a4)
--5.20557  Rtype(a1,a2,a3,a4)
-
-// -6.85115  RFtype(a1,a2,a3,a4)
--6.85115  RFtype(a1,a2,a3,a4)
 

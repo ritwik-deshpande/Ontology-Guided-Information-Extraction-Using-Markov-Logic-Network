@@ -1,0 +1,7 @@
+Etype(13,0,Peop)
+Etype(13,1,Org)
+Etype(13,7,Org)
+Etype(13,8,Org)
+Etype(13,9,Org)
+Etype(13,34,Loc)
+Rtype(13,1,9,OrgBased_In)

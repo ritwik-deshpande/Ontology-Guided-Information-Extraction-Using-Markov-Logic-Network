@@ -1,0 +1,8 @@
+Etype(100,10,Peop)
+Etype(100,11,Other)
+Etype(100,17,Org)
+Etype(100,18,Org)
+Etype(100,19,Org)
+Etype(100,21,Loc)
+Etype(100,25,Loc)
+Rtype(100,21,25,Located_In)

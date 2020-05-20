@@ -1,0 +1,4 @@
+Etype(26,1,Loc)
+Etype(26,2,Org)
+Etype(26,3,Org)
+Rtype(26,3,1,OrgBased_In)

@@ -1,0 +1,5 @@
+Etype(126,0,Peop)
+Etype(126,5,Org)
+Etype(126,7,Peop)
+Etype(126,8,Peop)
+Rtype(126,8,5,Work_For)

@@ -1,0 +1,6 @@
+Etype(283,0,Other)
+Etype(283,21,Loc)
+Etype(283,23,Loc)
+Etype(283,24,Other)
+Etype(283,25,Loc)
+Rtype(283,0,21,None)

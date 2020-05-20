@@ -1,0 +1,6 @@
+Etype(76,0,Loc)
+Etype(76,2,Loc)
+Etype(76,4,Org)
+Rtype(76,0,2,Located_In)
+Rtype(76,4,2,OrgBased_In)
+Rtype(76,4,0,OrgBased_In)

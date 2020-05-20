@@ -1,0 +1,6 @@
+Etype(116,14,Peop)
+Etype(116,15,Peop)
+Etype(116,19,Org)
+Etype(116,20,Org)
+Etype(116,36,Loc)
+Rtype(116,15,20,Work_For)
