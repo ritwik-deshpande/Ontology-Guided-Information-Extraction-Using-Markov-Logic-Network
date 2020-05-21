@@ -1,0 +1,30 @@
+The Classification Report of  Base Classifier on Testing against 288 sentences in test.txt(Ignoring BIO encoding).
+
+classification_report: 
+               precision    recall  f1-score   support
+
+       B-Loc      0.736     0.817     0.775       427
+       B-Org      0.691     0.621     0.654       198
+     B-Other      0.818     0.545     0.655       132
+      B-Peop      0.752     0.707     0.729       321
+       I-Loc      0.838     0.654     0.734       205
+       I-Org      0.613     0.755     0.677       241
+     I-Other      0.860     0.630     0.727       127
+      I-Peop      0.786     0.905     0.841       369
+           O      0.972     0.972     0.972      6369
+
+    accuracy                          0.917      8389
+   macro avg      0.785     0.734     0.751      8389
+weighted avg      0.919     0.917     0.916      8389
+
+confusion_matrix :
+ [[ 349   18    0   28    3    2    0    2   25]
+ [  26  123    0   10    2    8    1    1   27]
+ [  14    7   72    2    0    0    2    0   35]
+ [  26    9    0  227    1   10    0   34   14]
+ [   8    0    0    0  134   28    0   17   18]
+ [   6    5    0    0    7  182    0   15   26]
+ [   1    0    4    0    3    9   80    1   29]
+ [   0    0    0    3    2   23    0  334    7]
+ [  44   16   12   32    8   35   10   21 6191]]
+
