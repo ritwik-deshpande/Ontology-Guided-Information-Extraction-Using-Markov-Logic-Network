@@ -1,3 +1,7 @@
+Alchemy Trained on 30 document Results.
+
+
+
  'recall', 'true', average, warn_for)
               precision    recall  f1-score   support
 
@@ -87,5 +91,87 @@ weighted avg       0.85      0.71      0.78      1761
  [  0   0   0   0]
  [ 44  48   0 442]]
 
-Classifier  Alchemy    Actual    Word
+Alchemy trained on 1153 document results:
+
+
+  'recall', 'true', average, warn_for)
+              precision    recall  f1-score   support
+
+        Kill       0.74      0.74      0.74        47
+     Live_In       0.73      0.49      0.59       100
+  Located_In       0.84      0.77      0.80        94
+        None       0.00      0.00      0.00         0
+ OrgBased_In       0.86      0.68      0.76       105
+    Work_For       0.86      0.49      0.62        76
+
+    accuracy                           0.63       422
+   macro avg       0.67      0.53      0.58       422
+weighted avg       0.81      0.63      0.70       422
+
+The Classification Report Alchemy trained Relation Classifier
+              precision    recall  f1-score   support
+
+        Kill       0.76      0.79      0.77        47
+     Live_In       0.75      0.59      0.66       100
+  Located_In       0.83      0.81      0.82        94
+        None       0.00      0.00      0.00         0
+ OrgBased_In       0.86      0.68      0.76       105
+    Work_For       0.86      0.49      0.62        76
+
+    accuracy                           0.66       422
+   macro avg       0.67      0.56      0.60       422
+weighted avg       0.81      0.66      0.72       422
+
+['Work_For', 'Live_In', 'Kill', 'Located_In', 'None', 'OrgBased_In']
+[[37  8  5  1 21  4]
+ [ 4 59  7  7 19  4]
+ [ 1  1 37  0  8  0]
+ [ 0  5  0 76  9  4]
+ [ 0  0  0  0  0  0]
+ [ 1  6  0  8 19 71]]
+None	Kill	Kill	On April 14 , while attending a play at the Ford Theatre in Washington , <B-Peop> Lincoln </B-Peop> was shot in the head by actor John Wilkes <I-Peop> Booth </I-Peop> , who cried out ` ` Sic Semper Tyranus ' ' ( ` ` Thus Ever to Tyrants , ' ' the motto of Virginia ) . 
+None	Live_In	Live_In	Port Arthur Mayor Malcolm <I-Peop> Grant </I-Peop> asked the 800 residents of Sabine Pass to evacuate the coastal community just west of the Louisiana line , citing the likelihood of high water closing the only highway between the town and Port <I-Loc> Arthur </I-Loc> . 
+None	Live_In	Live_In	Dancers of Moscow 's Bolshoi Ballet in Moscow and Leningrad 's Kirov Ballet , together with opera singers from the Armenian capital of Yerevan , joined <B-Loc> U.S. </B-Loc> sopranos June <I-Peop> Anderson </I-Peop> and Carol Vaness and British dancers and singers . 
+None	Live_In	Live_In	Anastas Mikoyan , then <B-Loc> Soviet </B-Loc> first deputy premier , was the catalyst for the reversal of <B-Peop> Khrushchev </B-Peop> 's order , according to the authors . 
+None	Live_In	Live_In	But the authors suggested that <B-Peop> Alekseev </B-Peop> , along with others in the <B-Loc> Soviet </B-Loc> diplomatic corps , were not receiving accurate information from Moscow about the missiles . 
+None	Located_In	Located_In	By year 's end , 6 million acres had burned in the West and <B-Loc> Alaska </B-Loc> , making 1988 the worst fire season in 30 years , and , in terms of firefighting resources committed , the most expensive in <B-Loc> U.S. </B-Loc> history , Sacher said . 
+None	Live_In	Live_In	There are even hopeful signs in Chicago 's schools , branded 14 months ago as the nation 's worst by <B-Loc> U.S. </B-Loc> Secretary William J. <I-Peop> Bennett </I-Peop> . 
+None	Live_In	Live_In	Prime Datuk Sri Dr. Mahathir said he discussed these matters with African National Congress , ANC , leader Nelson <I-Peop> Mandela </I-Peop> and President de Klerk during his brief visit to South <I-Loc> Africa </I-Loc> . 
+None	Located_In	Located_In	In a travel advisory issued Monday , the State Department said there have been ` ` a few instances of attacks on tourists ' ' in <B-Loc> Kenya </B-Loc> , particularly ` ` along the coast south of <B-Loc> Mombasa </B-Loc> and in remote areas of the country , including some national parks . 
+None	Live_In	Live_In	On Oct. 18 , 1921 , Jesse Alexander Helms <I-Peop> Jr. </I-Peop> was born to a policeman and his wife in <B-Loc> Monroe </B-Loc> , population 3 , 000 . 
+None	Live_In	Live_In	In the name of God , the Merciful , the Compassionate , Since criminal <B-Loc> America </B-Loc> and the Zionist enemy did not take our decision to execute American spy <B-Peop> Higgins </B-Peop> seriously , and since Sheik Abdul Karim Obeid and his two brethren were not freed by the specified deadline out of disdain for our ultimatum , the life of Higgins and our sacred sanctities , and to implement God 's just will , the execution of American spy Higgins has been carried out by hanging at 3 p.m. this Monday afternoon 28 Zul Hijja , 1409 Hegira , which coincides with 
+None	Live_In	Live_In	In the name of God , the Merciful , the Compassionate , Since criminal <B-Loc> America </B-Loc> and the Zionist enemy did not take our decision to execute American spy Higgins seriously , and since Sheik Abdul Karim Obeid and his two brethren were not freed by the specified deadline out of disdain for our ultimatum , the life of Higgins and our sacred sanctities , and to implement God 's just will , the execution of American spy <B-Peop> Higgins </B-Peop> has been carried out by hanging at 3 p.m. this Monday afternoon 28 Zul Hijja , 1409 Hegira , which coincides with 
+None	Kill	Kill	Today 's highlight in history : On Nov. 24 , 1963 , in a scene captured on live network television , Dallas nightclub owner Jack Ruby shot and mortally wounded Lee Harvey <I-Peop> Oswald </I-Peop> as the accused assassin of President John F. <I-Peop> Kennedy </I-Peop> was being escorted by police to an armored truck at the Dallas municipal building for transfer to the county jail . 
+None	Located_In	Located_In	Urutigoechea and the others were arrested Wednesday in the cities of <B-Loc> Bayonee </B-Loc> and Bonloc in southwestern France in Poitiers in west-central <B-Loc> France </B-Loc> . 
+None	Located_In	Located_In	Urutigoechea and the others were arrested Wednesday in the cities of Bayonee and <B-Loc> Bonloc </B-Loc> in southwestern France in Poitiers in west-central <B-Loc> France </B-Loc> . 
+None	Live_In	Live_In	Dole strategists looked on North Carolina as one of their best Southern prospects _ largely because the candidate 's wife , former transportation secretary Elizabeth <I-Peop> Dole </I-Peop> , is a native of Salisbury , <B-Loc> N.C. </B-Loc> Polls published over the weekend showed Dole , who trailed by as much as 15 percentage points two weeks ago , had pulled even with Bush . 
+The Classification Report of  Base Classifier
+              precision    recall  f1-score   support
+
+         Loc       0.88      0.78      0.83       632
+         Org       0.78      0.72      0.75       439
+       Other       0.00      0.00      0.00         0
+        Peop       0.89      0.87      0.88       690
+
+    accuracy                           0.80      1761
+   macro avg       0.64      0.59      0.61      1761
+weighted avg       0.86      0.80      0.83      1761
+
+The Classification Report Alchemy trained Base Classifier
+              precision    recall  f1-score   support
+
+         Loc       0.87      0.73      0.79       632
+         Org       0.78      0.72      0.75       439
+       Other       0.00      0.00      0.00         0
+        Peop       0.88      0.78      0.83       690
+
+    accuracy                           0.75      1761
+   macro avg       0.63      0.56      0.59      1761
+weighted avg       0.85      0.75      0.80      1761
+
+['Peop', 'Org', 'O', 'Loc']
+[[537  42   0  28]
+ [ 26 315   0  38]
+ [  0   0   0   0]
+ [ 45  48   0 460]]
 

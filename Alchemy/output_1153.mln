@@ -1,0 +1,57 @@
+//predicate declarations
+EFtype(sid,tid,token)
+RFtype(sid,tid,tid,rel)
+Etype(sid,tid,token)
+Rtype(sid,tid,tid,rel)
+
+// 10.5383  EFtype(a1,a2,Peop) v !Etype(a1,a2,Peop)
+10.5383  EFtype(a1,a2,Peop) v !Etype(a1,a2,Peop)
+
+// 8.84984  EFtype(a1,a2,Loc) v !Etype(a1,a2,Loc)
+8.84984  EFtype(a1,a2,Loc) v !Etype(a1,a2,Loc)
+
+// 4.12466  EFtype(a1,a2,Org) v !Etype(a1,a2,Org)
+4.12466  EFtype(a1,a2,Org) v !Etype(a1,a2,Org)
+
+// 15.933  EFtype(a1,a2,Other) v !Etype(a1,a2,Other)
+15.933  EFtype(a1,a2,Other) v !Etype(a1,a2,Other)
+
+// 12.7747  RFtype(a1,a2,a3,Work_For) v !Rtype(a1,a2,a3,Work_For)
+12.7747  RFtype(a1,a2,a3,Work_For) v !Rtype(a1,a2,a3,Work_For)
+
+// 12.2892  RFtype(a1,a2,a3,Live_In) v !Rtype(a1,a2,a3,Live_In)
+12.2892  RFtype(a1,a2,a3,Live_In) v !Rtype(a1,a2,a3,Live_In)
+
+// 11.8412  RFtype(a1,a2,a3,Located_In) v !Rtype(a1,a2,a3,Located_In)
+11.8412  RFtype(a1,a2,a3,Located_In) v !Rtype(a1,a2,a3,Located_In)
+
+// 11.8699  RFtype(a1,a2,a3,OrgBased_In) v !Rtype(a1,a2,a3,OrgBased_In)
+11.8699  RFtype(a1,a2,a3,OrgBased_In) v !Rtype(a1,a2,a3,OrgBased_In)
+
+// 10.3628  RFtype(a1,a2,a3,Kill) v !Rtype(a1,a2,a3,Kill)
+10.3628  RFtype(a1,a2,a3,Kill) v !Rtype(a1,a2,a3,Kill)
+
+// 9.33856  RFtype(a1,a2,a3,None) v !Rtype(a1,a2,a3,None)
+9.33856  RFtype(a1,a2,a3,None) v !Rtype(a1,a2,a3,None)
+
+// 2.05534  Etype(a1,a2,a3)
+//2.05534  Etype(a1,a2,a3)
+
+// -4.2526  EFtype(a1,a2,a3)
+//-4.2526  EFtype(a1,a2,a3)
+
+// 1.59703  Rtype(a1,a2,a3,a4)
+//1.59703  Rtype(a1,a2,a3,a4)
+
+// -9.0858  RFtype(a1,a2,a3,a4)
+//-9.0858  RFtype(a1,a2,a3,a4)
+
+EFtype(s,t1,Peop) ^ EFtype(s,t2,Peop) => RFtype(s,t1,t2,Kill).
+
+EFtype(s,t1,Loc) ^ EFtype(s,t2,Loc) => RFtype(s,t1,t2,Located_In).
+
+EFtype(s,t1,Peop) ^ EFtype(s,t2,Org) => RFtype(s,t1,t2,Work_For).
+
+EFtype(s,t1,Org) ^ EFtype(s,t2,Loc) => RFtype(s,t1,t2,OrgBased_In).
+
+EFtype(s,t1,Peop) ^ EFtype(s,t2,Loc) => RFtype(s,t1,t2,Live_In).

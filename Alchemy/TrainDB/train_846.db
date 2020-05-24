@@ -1,0 +1,6 @@
+Etype(846,0,Loc)
+EFtype(846,0,Loc)
+Etype(846,1,Org)
+EFtype(846,1,Org)
+Rtype(846,1,0,OrgBased_In)
+RFtype(846,1,0,OrgBased_In)

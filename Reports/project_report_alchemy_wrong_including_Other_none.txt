@@ -1,4 +1,4 @@
-ik-HP-15-Notebook-PC:~/BTProject/Alchemy$ python results.py inference.results base_classifier_test.csv relation_classifier_test_base.csv
+Alchemy trained on 30 document results.
 The Classification Report of  Relation Classifier
               precision    recall  f1-score   support
 
@@ -644,4 +644,224 @@ Peop	Other	Peop	Oswald
 Peop	Other	Peop	Kennedy
 Loc	Other	Loc	Jakarta
 Loc	Other	Loc	States
+
+
+
+Alchemy trained on 1153 documents
+
+The Classification Report of  Relation Classifier
+              precision    recall  f1-score   support
+
+        Kill       0.38      0.74      0.51        47
+     Live_In       0.48      0.49      0.48       100
+  Located_In       0.39      0.77      0.51        94
+        None       0.83      0.65      0.73       704
+ OrgBased_In       0.62      0.68      0.65       105
+    Work_For       0.46      0.49      0.47        76
+
+    accuracy                           0.64      1126
+   macro avg       0.53      0.63      0.56      1126
+weighted avg       0.70      0.64      0.65      1126
+
+The Classification Report Alchemy trained Relation Classifier
+              precision    recall  f1-score   support
+
+        Kill       0.36      0.79      0.49        47
+     Live_In       0.44      0.59      0.50       100
+  Located_In       0.35      0.81      0.49        94
+        None       0.84      0.57      0.68       704
+ OrgBased_In       0.62      0.68      0.65       105
+    Work_For       0.46      0.49      0.47        76
+
+    accuracy                           0.61      1126
+   macro avg       0.51      0.65      0.55      1126
+weighted avg       0.70      0.61      0.62      1126
+
+['Work_For', 'Live_In', 'Kill', 'Located_In', 'None', 'OrgBased_In']
+[[ 37   8   5   1  21   4]
+ [  4  59   7   7  19   4]
+ [  1   1  37   0   8   0]
+ [  0   5   0  76   9   4]
+ [ 37  56  54 124 402  31]
+ [  1   6   0   8  19  71]]
+None	Located_In	None	Port Arthur Mayor Malcolm Grant asked the 800 residents of Sabine <I-Loc> Pass </I-Loc> to evacuate the coastal community just west of the <B-Loc> Louisiana </B-Loc> line , citing the likelihood of high water closing the only highway between the town and Port Arthur . 
+None	Located_In	None	Dancers of Moscow 's Bolshoi Ballet in <B-Loc> Moscow </B-Loc> and Leningrad 's Kirov Ballet , together with opera singers from the Armenian capital of Yerevan , joined <B-Loc> U.S. </B-Loc> sopranos June Anderson and Carol Vaness and British dancers and singers . 
+None	Kill	None	Belli 's clients have included Jack Ruby , who killed John F. <I-Peop> Kennedy </I-Peop> assassin Lee Harvey Oswald , and <B-Peop> Jim </B-Peop> and Tammy Bakker . 
+None	Kill	None	Belli 's clients have included Jack Ruby , who killed John F. <I-Peop> Kennedy </I-Peop> assassin Lee Harvey Oswald , and Jim and Tammy <I-Peop> Bakker </I-Peop> . 
+None	Kill	None	Belli 's clients have included Jack Ruby , who killed John F. Kennedy assassin Lee Harvey Oswald , and <B-Peop> Jim </B-Peop> and Tammy <I-Peop> Bakker </I-Peop> . 
+None	Located_In	None	Albert O. Harjula , 29 , of <B-Loc> Thomaston </B-Loc> , became trapped first , said Paul Fournier , a spokesman for the state Department of Inland Fisheries and <B-Loc> Wildlife </B-Loc> . 
+None	Live_In	None	<B-Peop> Lennon </B-Peop> was returning home with <B-Loc> Ono </B-Loc> after a recording session when Mark David Chapman , a fan who received the ex-Beatle 's autograph just hours before , shot and killed him . 
+None	Live_In	None	The jury in a television trial found James Earl Ray not guilty of murdering Martin Luther <I-Peop> King </I-Peop> after a <B-Loc> Memphis </B-Loc> hearing screened on the 25th anniversary of the assassination . 
+None	Located_In	None	In final arguments after a two-week trial in U.S. District <I-Loc> Court </I-Loc> , lawyers for families of the victims said Flight 007 was off course almost from the minute it left the ground in <B-Loc> Anchorage </B-Loc> , Alaska , and headed to its Pacific Ocean route for Seoul , South Korea . 
+None	Located_In	None	In final arguments after a two-week trial in U.S. District <I-Loc> Court </I-Loc> , lawyers for families of the victims said Flight 007 was off course almost from the minute it left the ground in Anchorage , <B-Loc> Alaska </B-Loc> , and headed to its Pacific Ocean route for Seoul , South Korea . 
+None	Live_In	None	" Sirhan had killed <B-Peop> Kennedy </B-Peop> for his warm feelings toward <B-Loc> Israel </B-Loc> , and I had come from Israel , " Markman said . 
+None	Located_In	None	But the authors suggested that Alekseev , along with others in the <B-Loc> Soviet </B-Loc> diplomatic corps , were not receiving accurate information from <B-Loc> Moscow </B-Loc> about the missiles . 
+None	Live_In	None	<B-Peop> Reagan </B-Peop> recalled that on the 40th anniversary of the Normandy landings he read a letter from a young woman whose late father had fought at Omaha Beach , a <B-Loc> Normandy </B-Loc> sector . 
+None	Kill	None	Similarly , Abraham <I-Peop> Lincoln </I-Peop> 's killer John Wilkes Booth ( Victor <I-Peop> Garber </I-Peop> ) breaks into song in the burning barn where he will shoot himself . 
+None	Kill	None	<B-Peop> Dole </B-Peop> is at an organizational disadvantage in the South but has had his wife , <B-Peop> Elizabeth </B-Peop> , a native of North Carolina , working the region for him . 
+None	Located_In	None	Jesse Jackson made an impressive showing in Democratic caucuses in his native South <I-Loc> Carolina </I-Loc> over the weekend and now takes aim at Tuesday 's primary in his adopted <B-Loc> Illinois </B-Loc> . 
+None	Located_In	None	In May , the Bush administration and the 12-nation European Community reached an interim agreement that allowed resumption of sales of about 15 percent of the $100 million in <B-Loc> U.S. </B-Loc> beef exports to <B-Loc> Europe </B-Loc> . 
+None	Located_In	None	<B-Loc> Martin </B-Loc> liked Jimbob for its ` ` basic down-home appeal , ' ' and thought ` ` anyone named Rogers has always been able to get elected to anything in <B-Loc> Oklahoma </B-Loc> , ' ' where the humorist Will Rogers was born . 
+None	Kill	None	Martin liked <B-Peop> Jimbob </B-Peop> for its ` ` basic down-home appeal , ' ' and thought ` ` anyone named <B-Peop> Rogers </B-Peop> has always been able to get elected to anything in Oklahoma , ' ' where the humorist Will Rogers was born . 
+None	Live_In	None	Martin liked <B-Peop> Jimbob </B-Peop> for its ` ` basic down-home appeal , ' ' and thought ` ` anyone named Rogers has always been able to get elected to anything in <B-Loc> Oklahoma </B-Loc> , ' ' where the humorist Will Rogers was born . 
+None	Live_In	None	Martin liked Jimbob for its ` ` basic down-home appeal , ' ' and thought ` ` anyone named <B-Peop> Rogers </B-Peop> has always been able to get elected to anything in <B-Loc> Oklahoma </B-Loc> , ' ' where the humorist Will Rogers was born . 
+None	Located_In	None	There are even hopeful signs in <B-Loc> Chicago </B-Loc> 's schools , branded 14 months ago as the nation 's worst by <B-Loc> U.S. </B-Loc> Secretary William J. Bennett . 
+None	Located_In	None	In 1911 , the 38th U.S. vice president , Hubert H. Humphrey , was born in Wallace , <I-Loc> S.D. </I-Loc> In 1929 , aviator Charles Lindbergh married Anne Spencer Morrow in Englewood , <B-Loc> N.J. </B-Loc> In 1935 , the Supreme Court struck down the National Industrial Recovery Act . 
+None	Live_In	None	Oswald was captured in the theater Nov. 22 , 1963 , only a few hours after <B-Peop> Kennedy </B-Peop> was shot to death on a <B-Loc> Dallas </B-Loc> street . 
+None	Located_In	None	In 1890 , the 34th president of the United <I-Loc> States </I-Loc> , Dwight D. Eisenhower , was born in Denison , <I-Loc> Texas </I-Loc> . 
+None	Live_In	None	With <I-Peop> China </I-Peop> 's crackdown on the democracy movement , ` ` the truth is finally coming out of the cruel nature of communism , ' ' said Shaw Yu-ming , director-general of Government Information , at the opening of <B-Loc> Taiwan </B-Loc> 's new downtown Washington information center . 
+None	Live_In	None	With <I-Peop> China </I-Peop> 's crackdown on the democracy movement , ` ` the truth is finally coming out of the cruel nature of communism , ' ' said Shaw Yu-ming , director-general of Government Information , at the opening of Taiwan 's new downtown <B-Loc> Washington </B-Loc> information center . 
+None	Located_In	None	With China 's crackdown on the democracy movement , ` ` the truth is finally coming out of the cruel nature of communism , ' ' said Shaw Yu-ming , director-general of Government Information , at the opening of <B-Loc> Taiwan </B-Loc> 's new downtown <B-Loc> Washington </B-Loc> information center . 
+None	Located_In	None	In 1767 , Andrew Jackson , seventh president of the United <I-Loc> States </I-Loc> , was born in Waxhaw , <I-Loc> S.C </I-Loc> . 
+None	Located_In	None	On this date : In 1758 , the fifth president of the United <I-Loc> States </I-Loc> , James Monroe , was born in Westmoreland County , <I-Loc> Virginia </I-Loc> . 
+None	Live_In	None	( Text ) Bratislava , May 11 ( CTK ) -- The Slovak Foreign <I-Peop> Ministry </I-Peop> reiterated its willingness to continue talks with Budapest on the division of the Danube 's waters between the Gabcikovo derivation canal on Slovakia 's territory and the <B-Loc> Danube </B-Loc> 's old course , in a note extended to the Hungarian Embassy today , the ministry told CTK . 
+None	Located_In	None	On this date : In 1833 , Benjamin Harrison , the 23rd president of the United <I-Loc> States </I-Loc> , was born in North Bend , <I-Loc> Ohio </I-Loc> . 
+None	Located_In	None	In 1822 , the 19th president of the United <I-Loc> States </I-Loc> , Rutherford B. Hayes , was born in Delaware , <I-Loc> Ohio </I-Loc> . 
+None	Live_In	None	<B-Peop> King </B-Peop> was killed April 4 , 1968 , in <B-Loc> Memphis </B-Loc> , Tenn. , and what would be his 60th birthday Sunday is celebrated as a national holiday Monday ; the celebration began with several events on Thursday . 
+None	Live_In	None	<B-Peop> King </B-Peop> was killed April 4 , 1968 , in Memphis , <I-Loc> Tenn. </I-Loc> , and what would be his 60th birthday Sunday is celebrated as a national holiday Monday ; the celebration began with several events on Thursday . 
+None	Live_In	None	In turn , <B-Peop> Vietnam </B-Peop> and the Cambodian government of Prime Hun Sen agreed to the fact-finding mission under the auspices of <B-Loc> U.N. </B-Loc> Secretary-General Javier Perez de Cuellar . 
+None	Live_In	None	Terry <I-Peop> Hands </I-Peop> , the subsidized theater 's artistic director , unveiled a new ` ` one-year , two-season work cycle ' ' under which actors will commit themselves to one 60-week contract , playing the first half of the season at the company 's home theater in Stratford-upon-Avon before transferring the productions to its London base at the <B-Loc> Barbican </B-Loc> . 
+None	Live_In	None	" This agreement is extremely important , as it inaugurates a more normal relationship with the EU , " said <B-Peop> Ortega </B-Peop> , after signing the agreement with Rene Steichen , European agricultural official , at the EU headquarters in <B-Loc> Brussels </B-Loc> . 
+None	Located_In	None	<B-Loc> Gadhafi </B-Loc> requested the meeting of foreign ministers after two <B-Loc> U.S. </B-Loc> Navy planes downed the Libyan jets , which American officials say were about to attack the U.S. craft . 
+None	Located_In	None	Temperatures around the nation at 2 a.m. EST ranged from 9 degrees below zero at Yellowstone , <B-Loc> Wyo. </B-Loc> , to 85 degrees at McAllen , <B-Loc> Texas </B-Loc> . 
+None	Located_In	None	The Taiwan information center provides background and research material on China at a suite of offices in <B-Loc> Washington </B-Loc> 's National Press Building , where several hundred <B-Loc> U.S. </B-Loc> and international news organizations also have bureaus . 
+None	Live_In	None	The House Assassinations Committee concluded in 1978 that <B-Peop> Kennedy </B-Peop> was ` ` probably ' ' assassinated as the result of a conspiracy involving a second gunman , a finding that broke from the Warren Commission 's belief that Lee Harvey Oswald acted alone in <B-Loc> Dallas </B-Loc> on Nov. 22 , 1963 . 
+None	Live_In	None	In the name of God , the Merciful , the Compassionate , Since criminal America and the Zionist enemy did not take our decision to execute American spy Higgins seriously , and since Sheik Abdul Karim <I-Peop> Obeid </I-Peop> and his two brethren were not freed by the specified deadline out of disdain for our ultimatum , the life of <B-Loc> Higgins </B-Loc> and our sacred sanctities , and to implement God 's just will , the execution of American spy Higgins has been carried out by hanging at 3 p.m. this Monday afternoon 28 Zul Hijja , 1409 Hegira , which coincides with 
+None	Kill	None	In the name of God , the Merciful , the Compassionate , Since criminal America and the Zionist enemy did not take our decision to execute American spy Higgins seriously , and since Sheik Abdul Karim <I-Peop> Obeid </I-Peop> and his two brethren were not freed by the specified deadline out of disdain for our ultimatum , the life of Higgins and our sacred sanctities , and to implement God 's just will , the execution of American spy <B-Peop> Higgins </B-Peop> has been carried out by hanging at 3 p.m. this Monday afternoon 28 Zul Hijja , 1409 Hegira , which coincides with 
+None	Kill	None	Today 's highlight in history : On Nov. 24 , 1963 , in a scene captured on live network television , <B-Peop> Dallas </B-Peop> nightclub owner Jack Ruby shot and mortally wounded Lee Harvey <I-Peop> Oswald </I-Peop> as the accused assassin of President John F. Kennedy was being escorted by police to an armored truck at the Dallas municipal building for transfer to the county jail . 
+None	Kill	None	Today 's highlight in history : On Nov. 24 , 1963 , in a scene captured on live network television , <B-Peop> Dallas </B-Peop> nightclub owner Jack Ruby shot and mortally wounded Lee Harvey Oswald as the accused assassin of President John F. <I-Peop> Kennedy </I-Peop> was being escorted by police to an armored truck at the Dallas municipal building for transfer to the county jail . 
+None	Live_In	None	Today 's highlight in history : On Nov. 24 , 1963 , in a scene captured on live network television , <B-Peop> Dallas </B-Peop> nightclub owner Jack Ruby shot and mortally wounded Lee Harvey Oswald as the accused assassin of President John F. Kennedy was being escorted by police to an armored truck at the <B-Loc> Dallas </B-Loc> municipal building for transfer to the county jail . 
+None	Live_In	None	Today 's highlight in history : On Nov. 24 , 1963 , in a scene captured on live network television , Dallas nightclub owner Jack Ruby shot and mortally wounded Lee Harvey Oswald as the accused assassin of President John F. <I-Peop> Kennedy </I-Peop> was being escorted by police to an armored truck at the <B-Loc> Dallas </B-Loc> municipal building for transfer to the county jail . 
+None	Located_In	None	Kim Dae-jung , head of South <I-Loc> Korea </I-Loc> 's leading opposition party , was detained on a court warrant Wednesday for questioning in connection with a party lawmaker 's illegal trip to communist North <I-Loc> Korea </I-Loc> . 
+None	Kill	None	Dole strategists looked on North Carolina as one of their best Southern prospects _ largely because the candidate 's wife , former transportation secretary Elizabeth Dole , is a native of Salisbury , N.C. Polls published over the weekend showed <B-Peop> Dole </B-Peop> , who trailed by as much as 15 percentage points two weeks ago , had pulled even with <B-Peop> Bush </B-Peop> . 
+None	Live_In	None	In 1978 , James Earl Ray , convicted assassin of Dr. Martin Luther King Jr. , told a Capitol <I-Peop> Hill </I-Peop> hearing he did not commit the crime , saying he 'd been set up by a mysterious man called ` ` <B-Loc> Raoul. </B-Loc> ' ' 
+None	Located_In	None	North Korean and senior Australian officials have held secret talks at Australian Embassies in <B-Loc> Jakarta </B-Loc> and Bangkok , and the federal government has informed the United States , Japan and South <I-Loc> Korea </I-Loc> . 
+None	Located_In	None	North Korean and senior Australian officials have held secret talks at Australian Embassies in Jakarta and <B-Loc> Bangkok </B-Loc> , and the federal government has informed the United States , Japan and South <I-Loc> Korea </I-Loc> . 
+The Classification Report of  Base Classifier
+              precision    recall  f1-score   support
+
+         Loc       0.78      0.78      0.78       632
+         Org       0.67      0.72      0.70       439
+       Other       0.98      0.97      0.98      6628
+        Peop       0.82      0.87      0.84       690
+
+    accuracy                           0.94      8389
+   macro avg       0.81      0.84      0.82      8389
+weighted avg       0.94      0.94      0.94      8389
+
+The Classification Report Alchemy trained Base Classifier
+              precision    recall  f1-score   support
+
+         Loc       0.87      0.73      0.79       632
+         Org       0.78      0.72      0.75       439
+       Other       0.97      1.00      0.98      6628
+        Peop       0.88      0.78      0.83       690
+
+    accuracy                           0.95      8389
+   macro avg       0.88      0.81      0.84      8389
+weighted avg       0.94      0.95      0.94      8389
+
+['Peop', 'Org', 'O', 'Loc']
+[[537  42   0  28]
+ [ 26 315   0  38]
+ [  0   0   0   0]
+ [ 45  48   0 460]]
+Peop	Other	Peop	Martin
+Peop	Other	Peop	Lee
+Peop	Other	Peop	Martin
+Peop	Other	Peop	Vaness
+Peop	Other	Peop	Sen.
+Peop	Other	Peop	Jack
+Peop	Other	Peop	F.
+Peop	Other	Peop	Harvey
+Peop	Other	Peop	Tammy
+Peop	Other	Peop	Albert
+Loc	Other	Loc	Beijing
+Peop	Other	Peop	Vaughn
+Peop	Other	Peop	Ralph
+Peop	Other	Peop	K.
+Loc	Other	Loc	New
+Loc	Other	Loc	York
+Peop	Other	Peop	Kenneth
+Peop	Other	Peop	Starr
+Peop	Other	Peop	Briz
+Peop	Other	Peop	Lopez
+Peop	Other	Peop	Ray
+Loc	Other	Loc	Pacific
+Loc	Other	Loc	Ocean
+Loc	Other	Loc	Korea
+Peop	Other	Peop	Branstad
+Peop	Other	Peop	Sen.
+Peop	Other	Peop	F.
+Peop	Other	Peop	James
+Peop	Other	Peop	Earl
+Peop	Other	Peop	Ken
+Peop	Other	Peop	Victor
+Loc	Other	Loc	Cape
+Peop	Other	Peop	Branko
+Peop	Other	Peop	Milan
+Peop	Other	Peop	Charles
+Peop	Other	Peop	Spencer
+Loc	Other	Loc	Englewood
+Org	Other	Org	Supreme
+Loc	Other	Loc	Sao
+Peop	Other	Peop	Datuk
+Peop	Other	Peop	de
+Peop	Other	Peop	Klerk
+Loc	Other	Loc	South
+Loc	Other	Loc	,
+Loc	Other	Loc	Ohio
+Loc	Other	Loc	,
+Loc	Other	Loc	United
+Loc	Other	Loc	States
+Peop	Other	Peop	Martin
+Loc	Other	Loc	,
+Peop	Other	Peop	Wolfgang
+Loc	Other	Loc	Bratislava
+Loc	Other	Loc	Slovakia
+Loc	Other	Loc	Bend
+Loc	Other	Loc	,
+Loc	Other	Loc	,
+Peop	Other	Peop	Yuriy
+Peop	Other	Peop	Stanislav
+Peop	Other	Peop	Stanislav
+Peop	Other	Peop	Mikhaylovich
+Loc	Other	Loc	Washington
+Loc	Other	Loc	Sea
+Loc	Other	Loc	Washington
+Loc	Other	Loc	Sea
+Loc	Other	Loc	Ellington
+Loc	Other	Loc	Bagua
+Loc	Other	Loc	Condorcanqui
+Loc	Other	Loc	Amazonas
+Loc	Other	Loc	San
+Loc	Other	Loc	Nueva
+Loc	Other	Loc	Biabo
+Loc	Other	Loc	Russia
+Peop	Other	Peop	Ray
+Peop	Other	Peop	Oswald
+Peop	Other	Peop	Robert
+Org	Other	Org	Samaritan
+Org	Other	Org	Hospital
+Peop	Other	Peop	Oswald
+Peop	Other	Peop	Kennedy
+Peop	Other	Peop	Lee
+Peop	Other	Peop	Harvey
+Peop	Other	Peop	John
+Loc	Other	Loc	Montreal
+Peop	Other	Peop	Jack
+Peop	Other	Peop	Ruby
+Peop	Other	Peop	Lee
+Peop	Other	Peop	Lee
+Peop	Other	Peop	Oswald
+Peop	Other	Peop	Sirhan
+Peop	Other	Peop	Robert
+Peop	Other	Peop	Krylov
+Peop	Other	Peop	Robert
+Peop	Other	Peop	Booth
+Peop	Other	Peop	Luther
+Peop	Other	Peop	King
+Peop	Other	Peop	Jr.
+Peop	Other	Peop	Oswald
+Peop	Other	Peop	Kennedy
 

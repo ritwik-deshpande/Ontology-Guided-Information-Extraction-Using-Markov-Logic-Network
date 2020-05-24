@@ -112,12 +112,12 @@ def getAlchemyReport(file,label,mln_results,labels):
         for sentenceID,sentence,token1,token2,gold_truth in zip(data['SentenceID'],data['Sentence'],data['token1'],data['token2'],data['Gold Truth']):
             key = str(sentenceID) + '-'+str(token1)+'-'+str(token2)
             if gold_truth != 'None':
-	            sentences.append(sentence)
-	            actual_tags.append(gold_truth)
-	            if key in mln_results.keys() :
-	                predicted_tags.append(mln_results[key][0])
-	            else:
-	                predicted_tags.append('None')
+		        sentences.append(sentence)
+		        actual_tags.append(gold_truth)
+		        if key in mln_results.keys() :
+		            predicted_tags.append(mln_results[key][0])
+		        else:
+		            predicted_tags.append('None')
         
 
     
@@ -143,9 +143,9 @@ if __name__=='__main__':
     p_c_tags ,a_tags = getClassifierReport("../Data/"+sys.argv[3],'Relation Classifier',relations)
     p_a_tags ,a_tags,sentences = getAlchemyReport('../Data/'+sys.argv[3],'Relation Classifier',mln_results,relations)
     
-    # for p_c_tag , p_a_tag , a_tag ,sentence in zip(p_c_tags,p_a_tags,a_tags,sentences):
-    # 	if p_a_tag == a_tag and p_c_tag != a_tag:
-    # 		print(p_c_tag+"\t"+p_a_tag+"\t"+a_tag+"\t"+sentence)
+    for p_c_tag , p_a_tag , a_tag ,sentence in zip(p_c_tags,p_a_tags,a_tags,sentences):
+    	if p_a_tag == a_tag and p_c_tag != a_tag:
+    		print(p_c_tag+"\t"+p_a_tag+"\t"+a_tag+"\t"+sentence)
 
     p_c_tags ,a_tags = getClassifierReport("../Data/"+sys.argv[2],'Base Classifier',entities)
     p_a_tags ,a_tags,words = getAlchemyReport('../Data/'+sys.argv[2],'Base Classifier',mln_results,entities)

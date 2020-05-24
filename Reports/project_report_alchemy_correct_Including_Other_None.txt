@@ -1,3 +1,5 @@
+Alchemy trained on 30 document results.
+
 The Classification Report of  Relation Classifier
               precision    recall  f1-score   support
 
@@ -280,4 +282,282 @@ Peop	Other	Other	North
 Peop	Other	Other	Korean
 Org	Other	Other	of
 Loc	Other	Other	Canadian
+
+
+Alchemy Trained on 1153 documents.
+
+The Classification Report of  Relation Classifier
+              precision    recall  f1-score   support
+
+        Kill       0.38      0.74      0.51        47
+     Live_In       0.48      0.49      0.48       100
+  Located_In       0.39      0.77      0.51        94
+        None       0.83      0.65      0.73       704
+ OrgBased_In       0.62      0.68      0.65       105
+    Work_For       0.46      0.49      0.47        76
+
+    accuracy                           0.64      1126
+   macro avg       0.53      0.63      0.56      1126
+weighted avg       0.70      0.64      0.65      1126
+
+The Classification Report Alchemy trained Relation Classifier
+              precision    recall  f1-score   support
+
+        Kill       0.36      0.79      0.49        47
+     Live_In       0.44      0.59      0.50       100
+  Located_In       0.35      0.81      0.49        94
+        None       0.84      0.57      0.68       704
+ OrgBased_In       0.62      0.68      0.65       105
+    Work_For       0.46      0.49      0.47        76
+
+    accuracy                           0.61      1126
+   macro avg       0.51      0.65      0.55      1126
+weighted avg       0.70      0.61      0.62      1126
+
+['Work_For', 'Live_In', 'Kill', 'Located_In', 'None', 'OrgBased_In']
+[[ 37   8   5   1  21   4]
+ [  4  59   7   7  19   4]
+ [  1   1  37   0   8   0]
+ [  0   5   0  76   9   4]
+ [ 37  56  54 124 402  31]
+ [  1   6   0   8  19  71]]
+None	Kill	Kill	On April 14 , while attending a play at the Ford Theatre in Washington , <B-Peop> Lincoln </B-Peop> was shot in the head by actor John Wilkes <I-Peop> Booth </I-Peop> , who cried out ` ` Sic Semper Tyranus ' ' ( ` ` Thus Ever to Tyrants , ' ' the motto of Virginia ) . 
+None	Live_In	Live_In	Port Arthur Mayor Malcolm <I-Peop> Grant </I-Peop> asked the 800 residents of Sabine Pass to evacuate the coastal community just west of the Louisiana line , citing the likelihood of high water closing the only highway between the town and Port <I-Loc> Arthur </I-Loc> . 
+None	Live_In	Live_In	Dancers of Moscow 's Bolshoi Ballet in Moscow and Leningrad 's Kirov Ballet , together with opera singers from the Armenian capital of Yerevan , joined <B-Loc> U.S. </B-Loc> sopranos June <I-Peop> Anderson </I-Peop> and Carol Vaness and British dancers and singers . 
+None	Live_In	Live_In	Anastas Mikoyan , then <B-Loc> Soviet </B-Loc> first deputy premier , was the catalyst for the reversal of <B-Peop> Khrushchev </B-Peop> 's order , according to the authors . 
+None	Live_In	Live_In	But the authors suggested that <B-Peop> Alekseev </B-Peop> , along with others in the <B-Loc> Soviet </B-Loc> diplomatic corps , were not receiving accurate information from Moscow about the missiles . 
+None	Located_In	Located_In	By year 's end , 6 million acres had burned in the West and <B-Loc> Alaska </B-Loc> , making 1988 the worst fire season in 30 years , and , in terms of firefighting resources committed , the most expensive in <B-Loc> U.S. </B-Loc> history , Sacher said . 
+None	Live_In	Live_In	There are even hopeful signs in Chicago 's schools , branded 14 months ago as the nation 's worst by <B-Loc> U.S. </B-Loc> Secretary William J. <I-Peop> Bennett </I-Peop> . 
+None	Live_In	Live_In	Prime Datuk Sri Dr. Mahathir said he discussed these matters with African National Congress , ANC , leader Nelson <I-Peop> Mandela </I-Peop> and President de Klerk during his brief visit to South <I-Loc> Africa </I-Loc> . 
+None	Located_In	Located_In	In a travel advisory issued Monday , the State Department said there have been ` ` a few instances of attacks on tourists ' ' in <B-Loc> Kenya </B-Loc> , particularly ` ` along the coast south of <B-Loc> Mombasa </B-Loc> and in remote areas of the country , including some national parks . 
+None	Live_In	Live_In	On Oct. 18 , 1921 , Jesse Alexander Helms <I-Peop> Jr. </I-Peop> was born to a policeman and his wife in <B-Loc> Monroe </B-Loc> , population 3 , 000 . 
+None	Live_In	Live_In	In the name of God , the Merciful , the Compassionate , Since criminal <B-Loc> America </B-Loc> and the Zionist enemy did not take our decision to execute American spy <B-Peop> Higgins </B-Peop> seriously , and since Sheik Abdul Karim Obeid and his two brethren were not freed by the specified deadline out of disdain for our ultimatum , the life of Higgins and our sacred sanctities , and to implement God 's just will , the execution of American spy Higgins has been carried out by hanging at 3 p.m. this Monday afternoon 28 Zul Hijja , 1409 Hegira , which coincides with 
+None	Live_In	Live_In	In the name of God , the Merciful , the Compassionate , Since criminal <B-Loc> America </B-Loc> and the Zionist enemy did not take our decision to execute American spy Higgins seriously , and since Sheik Abdul Karim Obeid and his two brethren were not freed by the specified deadline out of disdain for our ultimatum , the life of Higgins and our sacred sanctities , and to implement God 's just will , the execution of American spy <B-Peop> Higgins </B-Peop> has been carried out by hanging at 3 p.m. this Monday afternoon 28 Zul Hijja , 1409 Hegira , which coincides with 
+None	Kill	Kill	Today 's highlight in history : On Nov. 24 , 1963 , in a scene captured on live network television , Dallas nightclub owner Jack Ruby shot and mortally wounded Lee Harvey <I-Peop> Oswald </I-Peop> as the accused assassin of President John F. <I-Peop> Kennedy </I-Peop> was being escorted by police to an armored truck at the Dallas municipal building for transfer to the county jail . 
+None	Located_In	Located_In	Urutigoechea and the others were arrested Wednesday in the cities of <B-Loc> Bayonee </B-Loc> and Bonloc in southwestern France in Poitiers in west-central <B-Loc> France </B-Loc> . 
+None	Located_In	Located_In	Urutigoechea and the others were arrested Wednesday in the cities of Bayonee and <B-Loc> Bonloc </B-Loc> in southwestern France in Poitiers in west-central <B-Loc> France </B-Loc> . 
+None	Live_In	Live_In	Dole strategists looked on North Carolina as one of their best Southern prospects _ largely because the candidate 's wife , former transportation secretary Elizabeth <I-Peop> Dole </I-Peop> , is a native of Salisbury , <B-Loc> N.C. </B-Loc> Polls published over the weekend showed Dole , who trailed by as much as 15 percentage points two weeks ago , had pulled even with Bush . 
+The Classification Report of  Base Classifier
+              precision    recall  f1-score   support
+
+         Loc       0.78      0.78      0.78       632
+         Org       0.67      0.72      0.70       439
+       Other       0.98      0.97      0.98      6628
+        Peop       0.82      0.87      0.84       690
+
+    accuracy                           0.94      8389
+   macro avg       0.81      0.84      0.82      8389
+weighted avg       0.94      0.94      0.94      8389
+
+The Classification Report Alchemy trained Base Classifier
+              precision    recall  f1-score   support
+
+         Loc       0.87      0.73      0.79       632
+         Org       0.78      0.72      0.75       439
+       Other       0.97      1.00      0.98      6628
+        Peop       0.88      0.78      0.83       690
+
+    accuracy                           0.95      8389
+   macro avg       0.88      0.81      0.84      8389
+weighted avg       0.94      0.95      0.94      8389
+
+['Peop', 'Org', 'O', 'Loc']
+[[537  42   0  28]
+ [ 26 315   0  38]
+ [  0   0   0   0]
+ [ 45  48   0 460]]
+Org	Other	Other	Provincial
+Org	Other	Other	Command
+Loc	Other	Other	Monday
+Peop	Other	Other	President
+Org	Other	Other	Nuclear
+Org	Other	Other	Nonproliferation
+Org	Other	Other	Treaty
+Peop	Other	Other	Mayor
+Loc	Other	Other	Arab
+Loc	Other	Other	Palestinians
+Loc	Other	Other	Armenian
+Org	Other	Other	Army
+Org	Other	Other	Agenda
+Peop	Other	Other	Vice
+Loc	Other	Other	American
+Loc	Other	Other	Dec.
+Loc	Other	Other	Contra
+Peop	Other	Other	O
+Peop	Other	Other	Investigator
+Org	Other	Other	Chancellor
+Loc	Other	Other	Israeli
+Org	Other	Other	Prime
+Org	Other	Other	Minister
+Loc	Other	Other	Canadian
+Loc	Other	Other	Cuban
+Org	Other	Other	Foreign
+Peop	Other	Other	President
+Peop	Other	Other	Nixon
+Loc	Other	Other	ex-Beatle
+Peop	Other	Other	Prison
+Org	Other	Other	Watergate
+Org	Other	Other	GATT
+Org	Other	Other	Article
+Org	Other	Other	III
+Org	Other	Other	National
+Org	Other	Other	Treaty
+Peop	Other	Other	Republican
+Org	Other	Other	Democrat
+Loc	Other	Other	Sandinistas
+Peop	Other	Other	Gov.
+Org	Other	Other	Middle
+Org	Other	Other	Eastern
+Peop	Other	Other	President
+Loc	Other	Other	Cuban
+Peop	Other	Other	Perhaps
+Org	Other	Other	DEM
+Peop	Other	Other	Besides
+Peop	Other	Other	Telephone
+Org	Other	Other	Assistant
+Loc	Other	Other	,
+Loc	Other	Other	Cobra
+Peop	Other	Other	Jail
+Loc	Other	Other	EDT
+Loc	Other	Other	South
+Org	Other	Other	of
+Peop	Other	Other	Thursday
+Loc	Other	Other	Cambodian
+Peop	Other	Other	Monday
+Peop	Other	Other	Sunday
+Peop	Other	Other	May
+Org	Other	Other	News
+Peop	Other	Other	Gov.
+Loc	Other	Other	Democrat
+Org	Other	Other	SRS
+Loc	Other	Other	Dr.
+Loc	Other	Other	Develop
+Loc	Other	Other	Receive
+Org	Other	Other	Secretary
+Org	Other	Other	Universal
+Org	Other	Other	Declaration
+Loc	Other	Other	Human
+Loc	Other	Other	Rights
+Org	Other	Other	National
+Org	Other	Other	Industrial
+Org	Other	Other	Recovery
+Org	Other	Other	Act
+Org	Other	Other	of
+Peop	Other	Other	Sen.
+Loc	Other	Other	Finandes
+Loc	Other	Other	Chilean
+Peop	Other	Other	Sheriff
+Peop	Other	Other	Lt.
+Org	Other	Other	State
+Org	Other	Other	Attorney
+Loc	Other	Other	D-Del.
+Peop	Other	Other	South
+Peop	Other	Other	Korean
+Peop	Other	Other	But
+Peop	Other	Other	However
+Peop	Other	Other	Monday
+Peop	Other	Other	With
+Loc	Other	Other	Phenergan
+Loc	Other	Other	,
+Loc	Other	Other	Arabic
+Loc	Other	Other	November
+Org	Other	Other	District
+Org	Other	Other	Energy
+Org	Other	Other	Department
+Peop	Other	Other	Saturday
+Loc	Other	Other	Iranian
+Peop	Other	Other	Korochkin
+Loc	Other	Other	Cambodian
+Org	Other	Other	Prime
+Loc	Other	Other	Photo
+Org	Other	Other	COLOR
+Loc	Other	Other	European
+Loc	Other	Other	Wallowa-Whitman
+Loc	Other	Other	Malheur
+Loc	Other	Other	Arrow
+Loc	Other	Other	Missile
+Loc	Other	Other	Tasks
+Org	Other	Other	ONLY
+Org	Other	Other	Dallas
+Org	Other	Other	County
+Org	Other	Other	Administration
+Peop	Other	Other	Building
+Loc	Other	Other	Libyan
+Org	Other	Other	American
+Peop	Other	Other	Under
+Loc	Other	Other	Kurds
+Peop	Other	Other	While
+Loc	Other	Other	Also
+Org	Other	Other	Mayor
+Org	Other	Other	Capt.
+Org	Other	Other	Signed
+Org	Other	Other	CCRI-CG
+Org	Other	Other	Dated
+Loc	Other	Other	Wednesday
+Loc	Other	Other	December
+Org	Other	Other	Commander
+Loc	Other	Other	Department
+Loc	Other	Other	,
+Loc	Other	Other	Russians
+Loc	Other	Other	Russian
+Loc	Other	Other	Chinese-Soviet
+Loc	Other	Other	Chinese
+Peop	Other	Other	Monday
+Loc	Other	Other	Needs
+Loc	Other	Other	All
+Peop	Other	Other	Scientists
+Peop	Other	Other	Believe
+Org	Other	Other	Russian
+Org	Other	Other	Historical
+Org	Other	Other	Sciences
+Org	Other	Other	Peace
+Loc	Other	Other	Russia
+Org	Other	Other	Interests
+Peop	Other	Other	Gov.
+Peop	Other	Other	On
+Peop	Other	Other	Monday
+Loc	Other	Other	Armenian
+Loc	Other	Other	Poles
+Loc	Other	Other	Highlight
+Loc	Other	Other	,
+Loc	Other	Other	Agenda
+Org	Other	Other	SRP
+Peop	Other	Other	Marine
+Peop	Other	Other	Lt.
+Org	Other	Other	Dallas
+Org	Other	Other	County
+Org	Other	Other	Administration
+Org	Other	Other	Building
+Peop	Other	Other	God
+Loc	Other	Other	Merciful
+Loc	Other	Other	Compassionate
+Org	Other	Other	Since
+Loc	Other	Other	Zionist
+Peop	Other	Other	Sheik
+Peop	Other	Other	God
+Org	Other	Other	American
+Loc	Other	Other	Hegira
+Loc	Other	Other	Challenger
+Loc	Other	Other	Fort
+Loc	Other	Other	Lee
+Peop	Other	Other	Wednesday
+Peop	Other	Other	Lt.
+Peop	Other	Other	Judge
+Peop	Other	Other	Acting
+Peop	Other	Other	Wednesday
+Org	Other	Other	PDAM
+Peop	Other	Other	BASA
+Loc	Other	Other	March
+Loc	Other	Other	Polls
+Peop	Other	Other	London
+Peop	Other	Other	Monday
+Loc	Other	Other	Mexican
+Org	Other	Other	Chairman
+Org	Other	Other	Events
+Peop	Other	Other	Dr.
+Peop	Other	Other	North
+Peop	Other	Other	Korean
+Org	Other	Other	of
+Loc	Other	Other	Canadian
+
 

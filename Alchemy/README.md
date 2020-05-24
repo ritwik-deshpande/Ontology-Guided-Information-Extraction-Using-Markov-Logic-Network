@@ -19,9 +19,11 @@ Copy the univRules.mln and queries.txt files from Project/Alchemy directory and 
 
 **Training Alchemy**
 
-We have already provided a train.db. Copy them inside your alchemy-2/bin folder
+Sentence wise Training for 1153 documents
 
-If you want to generate a custom train.db using the new results that are generated from the classifers(base_classifier_train.csv and relation_classifier_train.csv) run the init_train.py file in inside your the Project/Alchemy folder. State the path of your alchemy-2/bin folder as parameter to create your custom_train.db inside that folder. Also Mention the training files as other two parameters which will be used to create train.db file (Refer the Data Folder). You can also specify no of sentences to be trained on by setting the variable NO_OF_SENTENCES inside init_train.py file.
+We have already provided a Directory TrainDB which contains train.db for each individual sentence. Copy them inside your alchemy-2/bin folder
+
+If you want to generate a custom train.db using the new results that are generated from the classifers(base_classifier_train.csv and relation_classifier_train.csv) run the init_train.py file in inside your the Project/Alchemy folder. State the path of your alchemy-2/bin folder as parameter to create your custom_train.db inside that folder. Also Mention the training files as other two parameters which will be used to create train.db file (Refer the Data Folder). You can also specify no of sentences to be trained on by setting the variable NO_OF_SENTENCES inside init_train.py file. (By default set to 1153 as per our dataset)
 
 
       	python init_train.py path_of_alchemy-2/bin base_classifier_train.csv relation_classifier_train.csv
@@ -29,11 +31,18 @@ If you want to generate a custom train.db using the new results that are generat
 
 
 
-Open a terminal and navigate to alchemy-2/bin directory. Execute the following command for training :
-  
-      	./learnwts -g -i univRules.mln -o output.mln -t train.db
+Open a terminal and navigate to alchemy-2/bin directory.
 
-Open the output.mln file generated. Add the following rules as hard constraints(INF wieght) at the end of the file  :
+Open the terminal again. Execute the following command for training:
+
+		for i in {1..1153}
+		do
+			./learnwts -g -i output_$((i-1)).mln -o output_$i.mln -t train_$i.db
+		done
+
+This will generate 1153 output.mln files. The last ouput file i.e output_1153.mln denotes the final weights of the rules after training for 1153 sentences.
+
+Open this output_1153.mln file generated. Add the following rules as hard constraints(INF wieght) at the end of the file  :
 
 EFtype(s,t1,Peop) ^ EFtype(s,t2,Peop) => RFtype(s,t1,t2,Kill).
 EFtype(s,t1,Loc) ^ EFtype(s,t2,Loc) => RFtype(s,t1,t2,Located_In).
@@ -49,7 +58,7 @@ Note: Remove the weighted predicates that are present at the end of Output.mln f
 
 The period at the end indicates that it is a hard constraint.
 
-You can refer the Output.mln file present in the Project/Alchemy Directory.
+You can refer the output_1153.mln file present in the Project/Alchemy Directory.
 
 
 **Testing in Alchemy**
@@ -71,7 +80,7 @@ Open the terminal again. Execute the following command for testing:
 
 		for i in {1..288}
 		do
-			./infer -i output.mln -e test_$i.db -r infer_$i.results -f queries
+			./infer -i output_1153.mln -e test_$i.db -r infer_$i.results -f queries
 		done
 This will generate 288 .results file for every sentence which we combine to give a single inference.results file.
       
@@ -93,7 +102,7 @@ To compare the final results with Base Classifier and Relation Classifier, run t
 
 **Assumption**
 
-Using our original Hypothesis we are only improving the "not None" relations which were misclassified by relation Classifier in our training dataset. We are not concerned with the False positives for None relation ( because we have written the rules/hard constraints considering that we would receive Rtypes of relations whose Gold Truth is not none while Testing in the test.db files) ,hence we are not display the None relations in the Classification reports.
+Using our original Hypothesis we are only improving the "not None" relations which were misclassified by relation Classifier in our training dataset. We are not concerned with the False positives for None relation ( because we have written the rules/hard constraints considering that we would receive Rtypes of relations whose Gold Truth is not none while Testing in the test.db files) ,hence we are not displaying the None relations in the Classification reports.
 
 
 For reference :

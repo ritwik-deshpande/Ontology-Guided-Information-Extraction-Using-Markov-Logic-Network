@@ -1,4 +1,5 @@
- 'recall', 'true', average, warn_for)
+Alchemy Trained on 30 document Results.
+
               precision    recall  f1-score   support
 
         Kill       0.74      0.74      0.74        47
@@ -230,4 +231,173 @@ Peop	Other	Peop	Oswald
 Peop	Other	Peop	Kennedy
 Loc	Other	Loc	Jakarta
 Loc	Other	Loc	States
+
+
+
+Alchemy Trained on 1153 document Results.
+
+The Classification Report of  Relation Classifier
+
+              precision    recall  f1-score   support
+
+        Kill       0.74      0.74      0.74        47
+     Live_In       0.73      0.49      0.59       100
+  Located_In       0.84      0.77      0.80        94
+        None       0.00      0.00      0.00         0
+ OrgBased_In       0.86      0.68      0.76       105
+    Work_For       0.86      0.49      0.62        76
+
+    accuracy                           0.63       422
+   macro avg       0.67      0.53      0.58       422
+weighted avg       0.81      0.63      0.70       422
+
+The Classification Report Alchemy trained Relation Classifier
+              precision    recall  f1-score   support
+
+        Kill       0.76      0.79      0.77        47
+     Live_In       0.75      0.59      0.66       100
+  Located_In       0.83      0.81      0.82        94
+        None       0.00      0.00      0.00         0
+ OrgBased_In       0.86      0.68      0.76       105
+    Work_For       0.86      0.49      0.62        76
+
+    accuracy                           0.66       422
+   macro avg       0.67      0.56      0.60       422
+weighted avg       0.81      0.66      0.72       422
+
+['Work_For', 'Live_In', 'Kill', 'Located_In', 'None', 'OrgBased_In']
+[[37  8  5  1 21  4]
+ [ 4 59  7  7 19  4]
+ [ 1  1 37  0  8  0]
+ [ 0  5  0 76  9  4]
+ [ 0  0  0  0  0  0]
+ [ 1  6  0  8 19 71]]
+The Classification Report of  Base Classifier
+              precision    recall  f1-score   support
+
+         Loc       0.88      0.78      0.83       632
+         Org       0.78      0.72      0.75       439
+       Other       0.00      0.00      0.00         0
+        Peop       0.89      0.87      0.88       690
+
+    accuracy                           0.80      1761
+   macro avg       0.64      0.59      0.61      1761
+weighted avg       0.86      0.80      0.83      1761
+
+The Classification Report Alchemy trained Base Classifier
+              precision    recall  f1-score   support
+
+         Loc       0.87      0.73      0.79       632
+         Org       0.78      0.72      0.75       439
+       Other       0.00      0.00      0.00         0
+        Peop       0.88      0.78      0.83       690
+
+    accuracy                           0.75      1761
+   macro avg       0.63      0.56      0.59      1761
+weighted avg       0.85      0.75      0.80      1761
+
+['Peop', 'Org', 'O', 'Loc']
+[[537  42   0  28]
+ [ 26 315   0  38]
+ [  0   0   0   0]
+ [ 45  48   0 460]]
+Peop	Other	Peop	Martin
+Peop	Other	Peop	Lee
+Peop	Other	Peop	Martin
+Peop	Other	Peop	Vaness
+Peop	Other	Peop	Sen.
+Peop	Other	Peop	Jack
+Peop	Other	Peop	F.
+Peop	Other	Peop	Harvey
+Peop	Other	Peop	Tammy
+Peop	Other	Peop	Albert
+Loc	Other	Loc	Beijing
+Peop	Other	Peop	Vaughn
+Peop	Other	Peop	Ralph
+Peop	Other	Peop	K.
+Loc	Other	Loc	New
+Loc	Other	Loc	York
+Peop	Other	Peop	Kenneth
+Peop	Other	Peop	Starr
+Peop	Other	Peop	Briz
+Peop	Other	Peop	Lopez
+Peop	Other	Peop	Ray
+Loc	Other	Loc	Pacific
+Loc	Other	Loc	Ocean
+Loc	Other	Loc	Korea
+Peop	Other	Peop	Branstad
+Peop	Other	Peop	Sen.
+Peop	Other	Peop	F.
+Peop	Other	Peop	James
+Peop	Other	Peop	Earl
+Peop	Other	Peop	Ken
+Peop	Other	Peop	Victor
+Loc	Other	Loc	Cape
+Peop	Other	Peop	Branko
+Peop	Other	Peop	Milan
+Peop	Other	Peop	Charles
+Peop	Other	Peop	Spencer
+Loc	Other	Loc	Englewood
+Org	Other	Org	Supreme
+Loc	Other	Loc	Sao
+Peop	Other	Peop	Datuk
+Peop	Other	Peop	de
+Peop	Other	Peop	Klerk
+Loc	Other	Loc	South
+Loc	Other	Loc	,
+Loc	Other	Loc	Ohio
+Loc	Other	Loc	,
+Loc	Other	Loc	United
+Loc	Other	Loc	States
+Peop	Other	Peop	Martin
+Loc	Other	Loc	,
+Peop	Other	Peop	Wolfgang
+Loc	Other	Loc	Bratislava
+Loc	Other	Loc	Slovakia
+Loc	Other	Loc	Bend
+Loc	Other	Loc	,
+Loc	Other	Loc	,
+Peop	Other	Peop	Yuriy
+Peop	Other	Peop	Stanislav
+Peop	Other	Peop	Stanislav
+Peop	Other	Peop	Mikhaylovich
+Loc	Other	Loc	Washington
+Loc	Other	Loc	Sea
+Loc	Other	Loc	Washington
+Loc	Other	Loc	Sea
+Loc	Other	Loc	Ellington
+Loc	Other	Loc	Bagua
+Loc	Other	Loc	Condorcanqui
+Loc	Other	Loc	Amazonas
+Loc	Other	Loc	San
+Loc	Other	Loc	Nueva
+Loc	Other	Loc	Biabo
+Loc	Other	Loc	Russia
+Peop	Other	Peop	Ray
+Peop	Other	Peop	Oswald
+Peop	Other	Peop	Robert
+Org	Other	Org	Samaritan
+Org	Other	Org	Hospital
+Peop	Other	Peop	Oswald
+Peop	Other	Peop	Kennedy
+Peop	Other	Peop	Lee
+Peop	Other	Peop	Harvey
+Peop	Other	Peop	John
+Loc	Other	Loc	Montreal
+Peop	Other	Peop	Jack
+Peop	Other	Peop	Ruby
+Peop	Other	Peop	Lee
+Peop	Other	Peop	Lee
+Peop	Other	Peop	Oswald
+Peop	Other	Peop	Sirhan
+Peop	Other	Peop	Robert
+Peop	Other	Peop	Krylov
+Peop	Other	Peop	Robert
+Peop	Other	Peop	Booth
+Peop	Other	Peop	Luther
+Peop	Other	Peop	King
+Peop	Other	Peop	Jr.
+Peop	Other	Peop	Oswald
+Peop	Other	Peop	Kennedy
+
 
