@@ -45,9 +45,13 @@ This will generate 1153 output.mln files. The last ouput file i.e output_1153.ml
 Open this output_1153.mln file generated. Add the following rules as hard constraints(INF wieght) at the end of the file  :
 
 EFtype(s,t1,Peop) ^ EFtype(s,t2,Peop) => RFtype(s,t1,t2,Kill).
+
 EFtype(s,t1,Loc) ^ EFtype(s,t2,Loc) => RFtype(s,t1,t2,Located_In).
+
 EFtype(s,t1,Peop) ^ EFtype(s,t2,Org) => RFtype(s,t1,t2,Work_For).
+
 EFtype(s,t1,Org) ^ EFtype(s,t2,Loc) => RFtype(s,t1,t2,OrgBased_In).
+
 EFtype(s,t1,Peop) ^ EFtype(s,t2,Loc) => RFtype(s,t1,t2,Live_In).
 
 
