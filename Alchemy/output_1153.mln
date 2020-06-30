@@ -34,18 +34,6 @@ Rtype(sid,tid,tid,rel)
 // 9.33856  RFtype(a1,a2,a3,None) v !Rtype(a1,a2,a3,None)
 9.33856  RFtype(a1,a2,a3,None) v !Rtype(a1,a2,a3,None)
 
-// 2.05534  Etype(a1,a2,a3)
-//2.05534  Etype(a1,a2,a3)
-
-// -4.2526  EFtype(a1,a2,a3)
-//-4.2526  EFtype(a1,a2,a3)
-
-// 1.59703  Rtype(a1,a2,a3,a4)
-//1.59703  Rtype(a1,a2,a3,a4)
-
-// -9.0858  RFtype(a1,a2,a3,a4)
-//-9.0858  RFtype(a1,a2,a3,a4)
-
 EFtype(s,t1,Peop) ^ EFtype(s,t2,Peop) => RFtype(s,t1,t2,Kill).
 
 EFtype(s,t1,Loc) ^ EFtype(s,t2,Loc) => RFtype(s,t1,t2,Located_In).

@@ -4,8 +4,16 @@ EFtype(sid,tid,token)
 Rtype(sid,tid,tid,rel)
 RFtype(sid,tid,tid,rel)
 
-Etype(s,t,+tk) => EFtype(s,t,tk)
-Rtype(s,t1,t2,+rl) => RFtype(s,t1,t2,rl)
+Etype(s,t,Peop) => EFtype(s,t,Peop)
+Etype(s,t,Loc) => EFtype(s,t,Loc)
+Etype(s,t,Org) => EFtype(s,t,Org)
+Etype(s,t,Other) => EFtype(s,t,Other)
 
+Rtype(s,t1,t2,Work_For) => RFtype(s,t1,t2,Work_For)
+Rtype(s,t1,t2,Live_In) => RFtype(s,t1,t2,Live_In)
+Rtype(s,t1,t2,Located_In) => RFtype(s,t1,t2,Located_In)
+Rtype(s,t1,t2,OrgBased_In) => RFtype(s,t1,t2,OrgBased_In)
+Rtype(s,t1,t2,Kill) => RFtype(s,t1,t2,Kill)
+Rtype(s,t1,t2,None) => RFtype(s,t1,t2,None)
 
 
